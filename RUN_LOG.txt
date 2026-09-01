@@ -1,0 +1,85 @@
+HW1 RUN LOG
+
+Student Configuration
+SID4 = 1980
+SEED = 1980
+SLICE = 980
+HP_ID = 0
+CLS_A = 0
+CLS_B = 1
+
+==================================================
+Q2 - NEURAL NETWORK EXPERIMENTS
+==================================================
+
+Dataset: diabetes.csv
+
+Data split:
+Training = 70%
+Validation = 15%
+Testing = 15%
+Split random_state = 1980
+
+Training seeds:
+1980
+1981
+1982
+
+Baseline configuration:
+Hidden layers = [64, 32]
+Learning rate = 0.001
+Epochs = 30
+
+Modified configuration (HP_ID = 0):
+Hidden layers = [32]
+Learning rate = 0.001
+Epochs = 30
+
+PyTorch Results:
+Baseline = 0.6491 +/- 0.0000
+Modified = 0.6667 +/- 0.0248
+
+TensorFlow Results:
+Baseline = 0.7807 +/- 0.0072
+Modified = 0.7982 +/- 0.0000
+
+==================================================
+Q3 - CUDA MATRIX MULTIPLICATION
+==================================================
+
+Environment:
+Google Colab GPU runtime
+GPU = NVIDIA Tesla T4
+CUDA compiler = nvcc 12.8
+
+CUDA configuration:
+Threads per block = 16 x 16 = 256 threads
+2D grid used to cover all matrix elements.
+
+Matrix 256 x 256:
+CPU = 53.5137 ms
+GPU kernel = 0.133152 ms
+H2D + D2H = 0.247936 ms
+GPU end-to-end = 0.381088 ms
+Speedup = 140.424x
+
+Matrix 1024 x 1024:
+CPU = 3491.75 ms
+GPU kernel = 9.21133 ms
+H2D + D2H = 2.90189 ms
+GPU end-to-end = 12.1132 ms
+Speedup = 288.260x
+
+Matrix 4096 x 4096:
+CPU = 248490.0 ms
+GPU kernel = 417.659 ms
+H2D + D2H = 45.8121 ms
+GPU end-to-end = 463.471 ms
+Speedup = 536.150x
+
+Profilers:
+NVIDIA Nsight Compute (ncu)
+NVIDIA nvprof
+
+Correctness:
+CUDA matrix multiplication result check PASSED for all three matrix sizes.
