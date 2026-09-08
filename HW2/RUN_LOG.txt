@@ -1,0 +1,139 @@
+Homework 2 Run Log
+
+SID4: 1980
+SEED: 1980
+SLICE: 980
+HP_ID: 0
+CLS_A: 0
+CLS_B: 1
+
+==================================================
+Q1 - Embedding-Based Transfer Learning
+==================================================
+
+Notebook: HW2Q1.ipynb
+
+Dataset:
+IMDB Movie Reviews
+
+Pretrained Model:
+word2vec-google-news-300
+
+Target Words:
+cast, score, plot, screen, review
+
+Completed:
+- Loaded pretrained Google News Word2Vec embeddings.
+- Extracted top-3 nearest neighbors before fine-tuning.
+- Fine-tuned embeddings using IMDB movie reviews.
+- Extracted top-3 nearest neighbors after fine-tuning.
+- Compared original and fine-tuned embeddings.
+- Computed cosine similarity for all five target words.
+- Generated t-SNE visualization for embedding shift.
+
+Most shifted word:
+score - cosine similarity 0.4856
+
+Least shifted word:
+screen - cosine similarity 0.6661
+
+Status: Completed successfully.
+
+
+==================================================
+Q2 - Retrieval-Augmented Generation
+==================================================
+
+Notebook: HW2Q2.ipynb
+
+Source:
+10 Wikipedia movie pages
+
+Embedding Model:
+all-MiniLM-L6-v2
+
+Vector Store:
+FAISS
+
+LLM:
+Qwen/Qwen2.5-0.5B-Instruct
+
+Baseline Chunk Configuration:
+Chunk size = 500
+Chunk overlap = 50
+
+Baseline chunks:
+2044
+
+Questions evaluated:
+5
+
+Retrieval Success:
+5/5 (100%)
+
+Observed RAG generation failures:
+2
+
+Alternative Chunk Configuration:
+Chunk size = 1000
+Chunk overlap = 100
+
+Alternative chunks:
+1111
+
+The two failed baseline questions were rerun using the alternative chunk configuration and produced correct final answers.
+
+Status: Completed successfully.
+
+
+==================================================
+Q3 - Training Optimizations
+==================================================
+
+Notebook: HW2Q3.ipynb
+
+Hardware:
+NVIDIA Tesla T4 GPU
+
+Seed:
+1980
+
+Controlled experiment configuration:
+Input size = 128
+Hidden size = 256
+Output size = 10
+Batch size = 64
+Training steps = 100
+Number of samples = 6400
+
+Experiments completed:
+- CPU tensor creation + GPU transfer
+- Direct GPU tensor creation
+- Default weight initialization
+- Xavier weight initialization
+- Activation checkpointing
+- Gradient accumulation
+- Mixed precision
+
+Tensor Creation Results:
+CPU + GPU transfer = 0.0786 s
+Direct GPU = 0.0106 s
+Speedup = 7.39x
+
+Repeated Baseline:
+Mean time = 0.1212 s
+Peak GPU memory = 19.93 MB
+Final loss = 2.2893
+
+Status: Completed successfully.
+
+
+==================================================
+Overall Status
+==================================================
+
+HW2Q1.ipynb - Completed
+HW2Q2.ipynb - Completed
+HW2Q3.ipynb - Completed
+
+All notebooks contain executed outputs.
