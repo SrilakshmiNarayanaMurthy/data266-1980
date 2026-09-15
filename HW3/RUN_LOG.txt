@@ -1,0 +1,43 @@
+Homework 3 - Run Log
+------------------------------------------------------------
+
+SID4                  : 1980
+Seed                  : 1980
+Device                : CPU
+
+Q1 - Prompt Engineering
+------------------------------------------------------------
+Techniques Tested     : Zero-Shot, Few-Shot, Chain-of-Thought,
+                        Zero-Shot CoT, Meta-Prompting,
+                        Tree of Thoughts
+Examples per Technique: 2
+Prompt Execution      : Programmatic using LangChain
+
+Q2 - Self-Attention
+------------------------------------------------------------
+Total Tokens          : 51
+Vocabulary Size       : 40
+Embedding Dimension   : 32
+
+Unmasked Model
+------------------------------------------------------------
+Epochs                 : 500
+Learning Rate          : 0.01
+Final Loss             : 0.3436
+Training Accuracy      : 80.00%
+Attention Matrix       : 51 x 51
+
+Causal Masked Model
+------------------------------------------------------------
+Epochs                 : 500
+Learning Rate          : 0.01
+Final Loss             : 0.1387
+Training Accuracy      : 94.00%
+Attention Matrix       : 51 x 51
+Maximum Future Attention: 0.0
+
+Status
+------------------------------------------------------------
+Q1 experiments completed successfully.
+Q2 unmasked attention completed successfully.
+Q2 causal masked attention completed successfully.
