@@ -1,0 +1,34 @@
+HW4 MINI GPT RUN LOG
+Log created (UTC): 2026-09-21T20:08:48.312718+00:00
+Execution: Run all cells in the HW4 Colab notebook, top to bottom
+PyTorch version: 2.11.0+cu128
+Device: cuda
+Dataset: /content/drive/MyDrive/GEN AI HWS/HW4/shakespeare.txt
+
+MODEL
+Vocabulary size: 49
+Sequence length: 128
+Hidden dimension: 128
+Attention heads: 4
+Decoder layers: 2
+Total parameters: 425,521
+
+TRAINING
+Optimizer: Adam; learning rate: 0.0003
+Batch size: 32; epochs: 6
+Epoch 1/6 | Loss: 3.0354
+Epoch 2/6 | Loss: 2.4151
+Epoch 3/6 | Loss: 2.2322
+Epoch 4/6 | Loss: 2.1379
+Epoch 5/6 | Loss: 2.0589
+Epoch 6/6 | Loss: 1.9780
+
+OUTPUT FILES
+Checkpoint: /content/drive/MyDrive/GEN AI HWS/HW4/mini_gpt_checkpoint.pt
+Loss figure: /content/drive/MyDrive/GEN AI HWS/HW4/training_loss.png
+Findings PDF: /content/drive/MyDrive/GEN AI HWS/HW4/HW4_Mini_GPT_Findings.pdf
+
+EARLIER SETUP ERROR
+FileNotFoundError: Shakespeare.txt was not found at /content/Shakespeare.txt.
+Resolved by mounting Drive and reading the actual file at:
+/content/drive/MyDrive/GEN AI HWS/HW4/shakespeare.txt
