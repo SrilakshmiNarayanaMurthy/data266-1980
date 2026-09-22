@@ -1,0 +1,23 @@
+PART D — COST OF ATTENTION SUMMARY
+==================================
+
+GPU UUID: GPU-cf356fb7-8770-75da-1f3a-b57d7ba2ab58
+Batch Size: 1
+Head Dimension: 64
+Precision: torch.float16
+
+NAIVE ATTENTION OOM BOUNDARY
+----------------------------
+Largest tested success: 147456
+Smallest tested OOM failure: 163840
+
+FUSED ATTENTION OOM BOUNDARY
+----------------------------
+Largest tested success: 1048576
+Smallest tested OOM failure: Not observed
+Reported boundary: > 1048576 tokens
+
+NAIVE MEMORY QUADRATIC FIT
+--------------------------
+Quadratic coefficient: 3.8146972656249975e-06 MiB/token^2
+R^2: 1.0
