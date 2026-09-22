@@ -1,0 +1,3 @@
+GPU_UUID,Operation,Precision,Size,Median_Time_ms,Effective_Bandwidth_GBs,Percent_Specified_Bandwidth,Achieved_TFLOPS,Arithmetic_Intensity_FLOPs_per_Byte,Roofline_Classification
+GPU-cf356fb7-8770-75da-1f3a-b57d7ba2ab58,Vector Addition,FP32,50000000,0.6712319850921631,893.8787383882151,88.67844626867213,,0.08333333333333333,Memory-bound
+GPU-cf356fb7-8770-75da-1f3a-b57d7ba2ab58,Matrix Multiplication,FP32,8192,29.353471755981445,,,37.45763488954076,1365.3333333333333,Compute-bound
