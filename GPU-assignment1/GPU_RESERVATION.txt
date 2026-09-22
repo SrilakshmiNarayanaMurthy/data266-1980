@@ -1,0 +1,5 @@
+Reservation Date: 2026-09-11
+GPU Workstation: NVIDIA GeForce RTX 4090
+GPU UUID: GPU-cf356fb7-8770-75da-1f3a-b57d7ba2ab58
+Reserved GPU Hours: 5.0
+Actual GPU Hours: 3.0
