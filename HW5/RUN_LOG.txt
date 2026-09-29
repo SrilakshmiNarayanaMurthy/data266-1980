@@ -1,0 +1,92 @@
+HW5: Fine-Tuning an LLM Using LoRA
+===================================
+
+Run date: September 28, 2026
+Hardware: Google Colab Tesla T4 GPU
+Device: CUDA
+Model: google/flan-t5-small
+Dataset: neil-code/dialogsum-test
+
+Personal Parameters
+-------------------
+SID4: 1980
+SEED: 1980
+SLICE: 980
+HP_ID: 0	
+CLS_A: 0
+CLS_B: 1
+
+Dataset Information
+-------------------
+Training split size: 1999
+Training subset size: 300
+Validation split size: 499
+Test split size: 499
+
+Training Configuration
+----------------------
+LoRA target modules: q, v
+LoRA alpha: 16
+LoRA dropout: 0.1
+Number of epochs: 1
+Learning rate: 0.0001
+Batch size: 4
+Gradient accumulation steps: 2
+Maximum input length: 512
+Maximum output length: 128
+Mixed precision: Disabled
+Random seed: 1980
+
+Rank-4 LoRA Results
+-------------------
+Total parameters: 77,133,184
+Trainable parameters: 172,032
+Trainable percentage: 0.2230%
+Final training loss: 4.768120815879421
+Training runtime: 22.1663 seconds
+Saved adapter: dialogsum_lora_r4_adapter/
+
+Rank-16 LoRA Results
+--------------------
+Total parameters: 77,649,280
+Trainable parameters: 688,128
+Trainable percentage: 0.8862%
+Final training loss: 4.767175774825247
+Training runtime: 22.48 seconds
+Saved adapter: dialogsum_lora_r16_adapter/
+
+Baseline Inference Outputs
+--------------------------
+Dialogue 1:
+Get a check-up.
+
+Dialogue 2:
+Ricky and I are going to see a doctor.
+
+Rank-4 LoRA Inference Outputs
+-----------------------------
+Dialogue 1:
+Get a check-up.
+
+Dialogue 2:
+Ricky and I are going to see a doctor.
+
+Rank-16 LoRA Inference Outputs
+------------------------------
+Dialogue 1:
+Get a check-up.
+
+Dialogue 2:
+Ricky and I are going to see a doctor.
+
+Comparison
+----------
+The baseline, rank-4, and rank-16 models produced the same outputs for
+both evaluation dialogues. Therefore, no visible improvement was observed
+after fine-tuning or after increasing the LoRA rank from 4 to 16.
+
+Final Status
+------------
+The notebook ran successfully after the compatibility fixes.
+Both LoRA experiments completed with finite training losses.
+Both LoRA adapters were saved successfully.
