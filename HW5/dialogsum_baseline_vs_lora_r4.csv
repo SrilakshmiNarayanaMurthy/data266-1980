@@ -1,0 +1,3 @@
+Dialogue,Reference Summary,Before Fine-Tuning,After LoRA Fine-Tuning (r=4)
+Dialogue 1,"Mr. Smith's getting a check-up, and Doctor Hawkins advises him to have one every year. Hawkins'll give some information about their classes and medications to help Mr. Smith quit smoking.",Get a check-up.,Get a check-up.
+Dialogue 2,Mrs Parker takes Ricky for his vaccines. Dr. Peters checks the record and then gives Ricky a vaccine.,Ricky and I are going to see a doctor.,Ricky and I are going to see a doctor.
