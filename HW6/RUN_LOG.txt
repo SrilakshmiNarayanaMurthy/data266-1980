@@ -1,0 +1,125 @@
+HOMEWORK 6 - RUN LOG
+============================================================
+
+Student Parameters
+------------------------------------------------------------
+SID4  : 1980
+SEED  : 1980
+SLICE : 980
+HP_ID : 0
+CLS_A : 0
+CLS_B : 1
+
+Environment
+------------------------------------------------------------
+PyTorch Version : 2.11.0+cu130
+CUDA Available  : True
+GPU             : Tesla T4
+Dataset         : STL-10
+Backbone        : ResNet-18
+Pretrained      : No
+
+PART A - SUPERVISED LEARNING
+------------------------------------------------------------
+Labeled Training Images : 500
+Test Images             : 8000
+Epochs                  : 15
+Optimizer               : Adam
+Learning Rate           : 0.001
+
+Final Train Accuracy    : 85.40%
+Final Test Accuracy     : 39.91%
+Best Test Accuracy      : 40.75%
+Best Epoch              : 14
+Training Time           : 1.55 minutes
+
+PART B - ROTATION SELF-SUPERVISED LEARNING
+------------------------------------------------------------
+Unlabeled Images        : 100000
+Rotation Classes        : 4
+Rotations               : 0, 90, 180, 270 degrees
+Pretraining Epochs      : 15
+Batch Size              : 128
+Optimizer               : Adam
+Learning Rate           : 0.001
+
+Final Rotation Loss     : 0.2903
+Final Rotation Accuracy : 89.25%
+Pretraining Time        : 21.31 minutes
+
+Linear Evaluation
+------------------------------------------------------------
+Labeled Images          : 500
+Encoder Frozen          : Yes
+Trainable Encoder Params: 0
+Linear Epochs           : 20
+
+Final Test Accuracy     : 42.67%
+Best Test Accuracy      : 42.67%
+Best Epoch              : 20
+Linear Training Time    : 2.01 minutes
+
+PART C - SIMCLR
+------------------------------------------------------------
+Unlabeled Images        : 20000
+Pretraining Epochs      : 20
+Batch Size              : 128
+Temperature (tau)       : 0.2
+Encoder Dimension       : 512
+Projection Dimension    : 128
+Similarity              : Cosine similarity
+
+Augmentations:
+1. RandomResizedCrop
+2. RandomHorizontalFlip
+3. ColorJitter
+4. RandomGrayscale
+
+Initial Contrastive Loss: 4.3528
+Final Contrastive Loss  : 2.2109
+Pretraining Time        : 25.55 minutes
+
+Linear Evaluation
+------------------------------------------------------------
+Labeled Images          : 500
+Encoder Frozen          : Yes
+Projection Head Used    : No
+Linear Epochs           : 20
+
+Final Test Accuracy     : 52.89%
+Best Test Accuracy      : 53.40%
+Best Epoch              : 12
+Linear Training Time    : 2.05 minutes
+
+PART D - NEAREST-NEIGHBOR ANALYSIS
+------------------------------------------------------------
+Embedding Dimension     : 512
+Similarity              : Cosine similarity
+Number of Queries       : 3
+Neighbors per Query     : 5
+
+Queries:
+1. Airplane - Test Index 3
+2. Bird     - Test Index 5
+3. Car      - Test Index 24
+
+Top-5 Same-Class Agreement:
+Supervised   : 7/15  = 46.67%
+Rotation SSL : 11/15 = 73.33%
+SimCLR       : 5/15  = 33.33%
+
+FINAL COMPARISON
+------------------------------------------------------------
+Supervised Final Accuracy   : 39.91%
+Rotation SSL Final Accuracy : 42.67%
+SimCLR Final Accuracy       : 52.89%
+
+Best Classification Model:
+SimCLR - 52.89%
+
+Best Top-5 Agreement on the 3 Selected Queries:
+Rotation SSL - 73.33%
+
+============================================================
+END OF RUN LOG
+============================================================
