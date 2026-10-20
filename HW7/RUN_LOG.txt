@@ -1,0 +1,134 @@
+HOMEWORK 7 - EXPERIMENT RUN SUMMARY
+============================================
+
+NOTE:
+This is a reconstructed summary of recorded results.
+It is not the complete original console transcript.
+
+Dataset: FashionMNIST
+Training samples: 60000
+Testing samples: 10000
+Device: CUDA
+Seed: 1980
+
+============================================
+FC-AE TRAINING
+============================================
+
+Start: 2026-10-20T13:56:20.892249
+End:   2026-10-20T13:57:46.693103
+
+Architecture: Fully Connected Autoencoder
+Parameters: 476720
+Latent dimension: 32
+Epochs: 20
+Batch size: 128
+Learning rate: 0.001
+
+Epoch [01/20] | Train MSE: 0.038061 | Test MSE: 0.022750
+Epoch [02/20] | Train MSE: 0.020401 | Test MSE: 0.018699
+Epoch [03/20] | Train MSE: 0.017724 | Test MSE: 0.016921
+Epoch [04/20] | Train MSE: 0.016228 | Test MSE: 0.015626
+Epoch [05/20] | Train MSE: 0.015119 | Test MSE: 0.014764
+Epoch [06/20] | Train MSE: 0.014219 | Test MSE: 0.013974
+Epoch [07/20] | Train MSE: 0.013519 | Test MSE: 0.013282
+Epoch [08/20] | Train MSE: 0.012947 | Test MSE: 0.012963
+Epoch [09/20] | Train MSE: 0.012521 | Test MSE: 0.012414
+Epoch [10/20] | Train MSE: 0.012156 | Test MSE: 0.012270
+Epoch [11/20] | Train MSE: 0.011807 | Test MSE: 0.011787
+Epoch [12/20] | Train MSE: 0.011497 | Test MSE: 0.011466
+Epoch [13/20] | Train MSE: 0.011209 | Test MSE: 0.011268
+Epoch [14/20] | Train MSE: 0.010955 | Test MSE: 0.010981
+Epoch [15/20] | Train MSE: 0.010731 | Test MSE: 0.010757
+Epoch [16/20] | Train MSE: 0.010486 | Test MSE: 0.010606
+Epoch [17/20] | Train MSE: 0.010305 | Test MSE: 0.010448
+Epoch [18/20] | Train MSE: 0.010141 | Test MSE: 0.010254
+Epoch [19/20] | Train MSE: 0.009980 | Test MSE: 0.010079
+Epoch [20/20] | Train MSE: 0.009818 | Test MSE: 0.010034
+
+Final Train MSE: 0.009818
+Final Test MSE: 0.010034
+Best Epoch: 20
+Training Time: 85.80 seconds
+
+PASS: FC-AE training completed.
+
+============================================
+VAE TRAINING
+============================================
+
+Start: 2026-10-20T14:48:35.180007
+End:   2026-10-20T14:50:02.259064
+
+Architecture: Variational Autoencoder
+Parameters: 480848
+Latent dimension: 32
+Epochs: 20
+Batch size: 128
+Learning rate: 0.001
+Beta: 1.0
+
+Epoch [01/20] | Train: 301.3703 | Test: 268.0266 | Recon: 255.7491 | KL: 12.2776
+Epoch [02/20] | Train: 259.3704 | Test: 256.1385 | Recon: 244.8596 | KL: 11.2788
+Epoch [03/20] | Train: 252.0387 | Test: 251.5066 | Recon: 240.4999 | KL: 11.0066
+Epoch [04/20] | Train: 248.5599 | Test: 249.2085 | Recon: 238.0036 | KL: 11.2049
+Epoch [05/20] | Train: 246.6043 | Test: 247.5520 | Recon: 236.3793 | KL: 11.1727
+Epoch [06/20] | Train: 245.2493 | Test: 246.3522 | Recon: 234.8307 | KL: 11.5215
+Epoch [07/20] | Train: 244.2526 | Test: 245.4411 | Recon: 233.9777 | KL: 11.4633
+Epoch [08/20] | Train: 243.5495 | Test: 244.8338 | Recon: 233.1535 | KL: 11.6803
+Epoch [09/20] | Train: 242.9199 | Test: 244.3724 | Recon: 232.1056 | KL: 12.2668
+Epoch [10/20] | Train: 242.2805 | Test: 243.8930 | Recon: 231.3322 | KL: 12.5608
+Epoch [11/20] | Train: 241.7901 | Test: 243.4409 | Recon: 231.4115 | KL: 12.0294
+Epoch [12/20] | Train: 241.3480 | Test: 243.0164 | Recon: 230.6998 | KL: 12.3166
+Epoch [13/20] | Train: 241.0080 | Test: 242.7930 | Recon: 230.0872 | KL: 12.7058
+Epoch [14/20] | Train: 240.7279 | Test: 242.4764 | Recon: 230.1568 | KL: 12.3196
+Epoch [15/20] | Train: 240.4010 | Test: 242.0557 | Recon: 229.7668 | KL: 12.2889
+Epoch [16/20] | Train: 240.2456 | Test: 241.9283 | Recon: 229.2129 | KL: 12.7154
+Epoch [17/20] | Train: 239.9738 | Test: 241.9364 | Recon: 229.4383 | KL: 12.4981
+Epoch [18/20] | Train: 239.8303 | Test: 241.6189 | Recon: 228.9491 | KL: 12.6697
+Epoch [19/20] | Train: 239.6223 | Test: 241.7592 | Recon: 228.9606 | KL: 12.7986
+Epoch [20/20] | Train: 239.4515 | Test: 241.3774 | Recon: 228.2453 | KL: 13.1321
+
+Final Train Loss: 239.4515
+Final Test Loss: 241.3774
+Final Test Reconstruction BCE:
+228.2453
+Final Test KL: 13.1321
+Best Epoch: 20
+Training Time: 87.08 seconds
+
+PASS: VAE training completed.
+
+============================================
+FULL TEST SET COMPARISON
+============================================
+
+Test Images: 10000
+FC-AE MSE: 0.010034
+VAE MSE: 0.014975
+Lower MSE Model: FC-AE
+
+PASS: Full test set comparison completed.
+
+============================================
+ERRORS ENCOUNTERED
+============================================
+
+Error 1:
+NameError: name 'HW7_DIR' is not defined
+
+Error 2:
+AssertionError: HW7 folder not found.
+Mount Google Drive first.
+
+Resolution:
+Verified Google Drive mount and corrected HW7_DIR.
+
+============================================
+RUN SUMMARY GENERATED
+============================================
+
+Generated: 2026-10-20T15:42:33.924953
+
+Original notebook console output should be
+retained for full reproducibility evidence.
