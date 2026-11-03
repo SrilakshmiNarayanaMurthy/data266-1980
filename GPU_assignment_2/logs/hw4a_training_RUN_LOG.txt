@@ -1,0 +1,52 @@
+HW4.a BERT BASELINE TRAINING
+=================================================================
+{
+    "model": "bert-base-uncased",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "precision": "FP32",
+    "train_batch_size": 16,
+    "epochs": 3,
+    "train_samples": 3500,
+    "best_epoch": 2,
+    "best_val_loss": 0.7152195054690044,
+    "final_val_accuracy": 0.6693333333333333,
+    "peak_allocated_gb": 2.7957820892333984,
+    "peak_reserved_gb": 3.099609375,
+    "wall_clock_seconds": 36.66233051099971,
+    "start_time": "2026-10-26T21:30:24.532161",
+    "end_time": "2026-10-26T21:31:01.188157"
+}
+
+EPOCH METRICS
+[
+    {
+        "epoch": 1,
+        "train_loss": 0.888025981426239,
+        "val_loss": 0.7216951519648234,
+        "val_accuracy": 0.6546666666666666,
+        "train_time_seconds": 10.933750065000368,
+        "epoch_time_seconds": 11.530791323000358,
+        "train_throughput_samples_per_sec": 320.1097500119125,
+        "peak_gpu_memory_gb": 2.7957816123962402
+    },
+    {
+        "epoch": 2,
+        "train_loss": 0.583201187644686,
+        "val_loss": 0.7152195054690044,
+        "val_accuracy": 0.6733333333333333,
+        "train_time_seconds": 10.204443665000326,
+        "epoch_time_seconds": 10.795760064000206,
+        "train_throughput_samples_per_sec": 342.98783107642237,
+        "peak_gpu_memory_gb": 2.7957820892333984
+    },
+    {
+        "epoch": 3,
+        "train_loss": 0.3700632611342839,
+        "val_loss": 0.7826200669606527,
+        "val_accuracy": 0.6693333333333333,
+        "train_time_seconds": 10.366708248999657,
+        "epoch_time_seconds": 10.964439456000036,
+        "train_throughput_samples_per_sec": 337.61922453424256,
+        "peak_gpu_memory_gb": 2.7957820892333984
+    }
+]
