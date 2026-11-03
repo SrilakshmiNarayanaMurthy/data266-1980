@@ -1,0 +1,285 @@
+
+=================================================================
+DATA 266 — HOMEWORK 9
+LATENT DIFFUSION AND STABLE DIFFUSION
+CONSOLIDATED EXPERIMENT RUN LOG
+=================================================================
+
+PERSONAL CONFIGURATION
+-----------------------------------------------------------------
+Personal Seed            : 1980
+Personal Slice           : 980
+Hyperparameter ID        : 0
+Class A                  : 0 (T-shirt/top)
+Class B                  : 1 (Trouser)
+
+ENVIRONMENT
+-----------------------------------------------------------------
+Platform                 : Google Colab
+Python                   : 3.13.16
+PyTorch                  : 2.11.0+cu130
+CUDA                     : Available
+GPU                      : NVIDIA Tesla T4
+
+STEP 0 — ENVIRONMENT VERIFICATION
+-----------------------------------------------------------------
+PASS: GPU environment verified.
+PASS: CUDA available.
+
+STEP 1 — DATASET PREPARATION
+-----------------------------------------------------------------
+Dataset                  : FashionMNIST
+Training Samples         : 60000
+Test Samples             : 10000
+Batch Size               : 32
+Image Dimensions         : 3 x 128 x 128
+Training Batches         : 1875
+PASS: Dataset prepared.
+
+STEP 2 — PRETRAINED VAE
+-----------------------------------------------------------------
+Model                    : stabilityai/sd-vae-ft-mse
+Parameters               : 83,653,863
+Latent Shape             : 4 x 16 x 16
+PASS: VAE loaded and verified.
+
+STEP 3 — LATENT ENCODING
+-----------------------------------------------------------------
+Latent Scaling Factor    : 0.18215
+Reconstruction MSE       : 0.001052
+PASS: Encoding and decoding verified.
+
+STEP 4 — RECONSTRUCTION VISUALIZATION
+-----------------------------------------------------------------
+Output                   : vae_reconstruction_comparison.png
+PASS: Reconstruction comparison saved.
+
+STEP 5 — PERSONAL CONFIGURATION
+-----------------------------------------------------------------
+Seed                     : 1980
+Selected Classes         : T-shirt/top, Trouser
+PASS: Personalized configuration applied.
+
+STEP 6 — DIFFUSION NOISE SCHEDULE
+-----------------------------------------------------------------
+Diffusion Timesteps      : 1000
+Beta Start               : 0.0001
+Beta End                 : 0.02
+Schedule                 : Linear
+PASS: Diffusion schedule verified.
+
+STEP 7 — FORWARD DIFFUSION
+-----------------------------------------------------------------
+PASS: Gaussian noise addition implemented.
+PASS: Forward diffusion tensor checks completed.
+
+STEP 8 — FORWARD DIFFUSION VISUALIZATION
+-----------------------------------------------------------------
+Output                   : latent_forward_diffusion.png
+PASS: Forward diffusion visualization saved.
+
+STEP 9 — TIMESTEP EMBEDDING
+-----------------------------------------------------------------
+Embedding Type           : Sinusoidal
+Embedding Dimension      : 256
+PASS: Timestep embedding verified.
+
+STEP 10 — RESIDUAL BLOCK
+-----------------------------------------------------------------
+PASS: Residual block implemented.
+PASS: Tensor shape verification completed.
+
+STEP 11 — SELF-ATTENTION BLOCK
+-----------------------------------------------------------------
+Attention Heads          : 4
+Attention Parameters     : 66,304
+PASS: Self-attention block verified.
+
+STEP 12 — LATENT DIFFUSION U-NET
+-----------------------------------------------------------------
+Model Parameters         : 2,060,036
+PASS: U-Net forward pass verified.
+
+STEP 13 — CONDITIONAL LATENT DIFFUSION
+-----------------------------------------------------------------
+Conditional Parameters   : 2,062,852
+Number of Classes        : 10
+Null Class Index         : 10
+CFG Dropout              : 0.1
+PASS: Class conditioning implemented.
+
+STEP 14 — TRAINING PIPELINE VERIFICATION
+-----------------------------------------------------------------
+Optimizer                : AdamW
+Learning Rate            : 0.0001
+Weight Decay             : 0.0001
+Initial Batch Loss       : 1.123619
+Gradient Norm            : 2.298308
+Single Step Time         : 0.2471 seconds
+PASS: Training update verified.
+
+STEP 15 — MODEL TRAINING
+-----------------------------------------------------------------
+Epoch 1 Loss             : 0.160785
+Epoch 2 Loss             : 0.113313
+Epoch 3 Loss             : 0.107501
+Epoch 4 Loss             : 0.102618
+Epoch 5 Loss             : 0.103192
+
+Training Epochs          : 5
+Best Epoch               : 4
+Best Loss                : 0.102618
+Final Loss               : 0.103192
+Loss Reduction           : 35.82%
+Total Training Time      : Approximately 71.7 minutes
+
+PASS: Five training epochs completed.
+PASS: Five checkpoints saved.
+PASS: Training history saved.
+
+STEP 16 — TRAINING METRICS
+-----------------------------------------------------------------
+Output                   : latent_training_loss.png
+Output                   : training_metrics.json
+PASS: Training metrics saved.
+
+STEP 17 — CFG DDIM SAMPLING
+-----------------------------------------------------------------
+Sampler                  : DDIM
+Sampling Steps           : 50
+Guidance Scale           : 3.0
+Samples Per Class        : 4
+Classes                  : T-shirt/top, Trouser
+Total Samples            : 8
+Sampling Time            : 0.5152 seconds
+
+PASS: Conditional sampling completed.
+PASS: Generated latents saved.
+
+STEP 18 — IMAGE DECODING
+-----------------------------------------------------------------
+Generated Image Shape    : 8 x 3 x 128 x 128
+Pixel Range              : [0, 1]
+Output                   : cfg_generated_fashionmnist.png
+
+PASS: Generated latents decoded.
+PASS: Eight images saved.
+
+STEP 19 — IMAGE QUALITY DIAGNOSTICS
+-----------------------------------------------------------------
+T-shirt Pairwise MSE     : 0.080547
+Trouser Pairwise MSE     : 0.023142
+Class Mean Difference    : 0.237177
+
+PASS: Pixel-level diagnostics completed.
+
+STEP 20 — VISUAL FAILURE ANALYSIS
+-----------------------------------------------------------------
+Images Reviewed          : 8
+Clearly Recognizable     : 5
+Partially Recognizable   : 3
+Unrecognizable           : 0
+Clear Recognition Rate   : 62.50%
+Mean Quality Rating      : 1.6250 / 2
+
+T-shirt Mean Rating      : 1.250
+Trouser Mean Rating      : 2.000
+
+PASS: Visual failure analysis completed.
+
+STEP 21 — CFG SCALE COMPARISON
+-----------------------------------------------------------------
+Scales Tested            : 1.0, 3.0, 5.0
+Matched Samples/Scale    : 4
+Sampling Steps           : 50
+
+CFG 1.0 Time             : 0.7765 seconds
+CFG 3.0 Time             : 0.7240 seconds
+CFG 5.0 Time             : 0.7261 seconds
+
+PASS: CFG comparison images generated.
+
+STEP 22 — CFG QUALITY COMPARISON
+-----------------------------------------------------------------
+CFG 1.0 vs 3.0 MSE       : 0.046194
+CFG 1.0 vs 3.0 MAE       : 0.128931
+
+CFG 1.0 vs 5.0 MSE       : 0.058263
+CFG 1.0 vs 5.0 MAE       : 0.149806
+
+CFG 3.0 vs 5.0 MSE       : 0.002903
+CFG 3.0 vs 5.0 MAE       : 0.029414
+
+PASS: CFG pixel differences evaluated.
+
+STEP 23 — FINAL CFG SELECTION
+-----------------------------------------------------------------
+Selected CFG Scale       : 3.0
+DDIM Steps               : 50
+Selection                : Qualitative visual comparison
+
+PASS: CFG scale selected.
+PASS: Selection justification documented.
+
+STEP 24 — FINAL EXPERIMENT REPORTS
+-----------------------------------------------------------------
+Output                   : experiment_summary.json
+Output                   : METRICS.md
+Output                   : FAILURE_ANALYSIS.md
+
+PASS: Experiment metrics consolidated.
+PASS: Reports generated.
+
+STEP 25 — LOGGING AND AI DISCLOSURE
+-----------------------------------------------------------------
+Output                   : RUN_LOG.txt
+Output                   : AI_USE.md
+
+PASS: Run log generated.
+PASS: AI use documented.
+
+STEP 26 — FINAL ARTIFACT VERIFICATION
+-----------------------------------------------------------------
+Required Artifacts       : 20/20 PASS
+JSON Reports Valid       : True
+Checkpoint Readable      : True
+Visual Review Complete   : True
+Checkpoints Found        : 5
+Individual Images        : 8/8
+
+PASS: Experiment artifacts verified.
+
+STEP 27 — SUBMISSION PACKAGE
+-----------------------------------------------------------------
+Package Directory        : HW9_Submission
+ZIP File                 : HW9_Submission.zip
+ZIP Files                : 38
+ZIP Size                 : 113.53 MB
+ZIP Integrity            : PASS
+
+WARNING: Notebook was not included in the original ZIP.
+
+FINAL EXPERIMENT SUMMARY
+-----------------------------------------------------------------
+Training Epochs          : 5
+Final Training Loss      : 0.103192
+Loss Reduction           : 35.82%
+DDIM Sampling Steps      : 50
+Selected CFG Scale       : 3.0
+Images Reviewed          : 8
+Clear Recognition Rate   : 62.50%
+
+LIMITATIONS
+-----------------------------------------------------------------
+This is a consolidated log based on recorded experiment
+results, not a verbatim transcript of every Colab cell.
+
+Historical timestamps and intermediate errors are not
+fully represented.
+
+The original package did not include the notebook.
+Notebook inclusion must be verified separately.
+
+=================================================================
+END OF CONSOLIDATED EXPERIMENT RUN LOG
+=================================================================
