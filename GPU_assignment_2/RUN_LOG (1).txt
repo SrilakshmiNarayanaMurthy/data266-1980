@@ -1,0 +1,142 @@
+HW4.5 GPU ASSIGNMENT II — RUN LOG
+=================================================================
+
+ENVIRONMENT
+-----------------------------------------------------------------
+GPU: NVIDIA GeForce RTX 4090
+GPU count: 1
+SID4: 1980
+SEED: 1980
+SLICE: 980
+HP_ID: 0
+CLS_A: 0
+CLS_B: 1
+
+RECORDED EXPERIMENT EVENTS
+-----------------------------------------------------------------
+[2026-10-26T21:30:24.532161] HW4.a baseline training
+  Source: metrics/hw4a_baseline_summary.json
+  Details: wall_clock_seconds=36.66233051099971; precision=FP32
+
+[2026-10-26T22:45:00.502473] Part A batch-128 epoch
+  Source: metrics/part_a_batch128_full_epoch.json
+  Details: epoch_seconds=7.921266724999441; examples_per_second=441.8485226553518; precision=FP32
+
+[2026-10-26T22:56:48.938976] Part B FP32 baseline
+  Source: metrics/part_b_baseline.json
+  Details: epoch_seconds=7.521791674999804; examples_per_second=465.3146685294353; precision=FP32; experiment=baseline
+
+[2026-10-26T22:57:26.557713] Part B BF16 AMP
+  Source: metrics/part_b_amp_bf16.json
+  Details: epoch_seconds=4.554753817999881; examples_per_second=768.4279194560173; precision=BF16 AMP; experiment=amp_bf16
+
+[2026-10-26T22:58:55.240531] Part B checkpointing
+  Source: metrics/part_b_gradient_checkpointing.json
+  Details: epoch_seconds=10.166402485000617; examples_per_second=344.2712409983626; precision=FP32; experiment=gradient_checkpointing
+
+[2026-10-26T23:03:48.231983] Part B accumulation
+  Source: metrics/part_b_gradient_accumulation.json
+  Details: epoch_seconds=7.327996328000154; examples_per_second=477.62032666781744; precision=FP32; experiment=gradient_accumulation
+
+[2026-10-26T23:05:50.748098] Part B 8-bit AdamW
+  Source: metrics/part_b_adamw_8bit.json
+  Details: epoch_seconds=7.766710869000235; examples_per_second=450.6412120952991; precision=FP32; experiment=adamw_8bit
+
+[2026-10-26T23:07:40.015639] Part B combined optimization
+  Source: metrics/part_b_combined.json
+  Details: epoch_seconds=5.008845110000038; examples_per_second=698.7638713387911; precision=BF16 AMP; experiment=combined
+
+[2026-10-26T23:11:42.963045] Part C single-GPU DDP
+  Source: metrics/part_c_single_gpu_ddp.json
+  Details: elapsed_seconds=0.5275737239990121; examples_per_second=242.62011957259583; world_size=1; experiment=single_gpu_ddp_functional_test
+
+EVENTS WITHOUT SOURCE TIMESTAMPS
+-----------------------------------------------------------------
+[TIMESTAMP NOT RECORDED] Part D model setup
+  Source: metrics/part_d_model_setup.json
+  Details: See source JSON
+
+[TIMESTAMP NOT RECORDED] Part D vLLM smoke test
+  Source: metrics/part_d_vllm_smoke_test.json
+  Details: See source JSON
+
+[TIMESTAMP NOT RECORDED] Part D vLLM benchmark
+  Source: metrics/part_d_vllm_benchmark.json
+  Details: See source JSON
+
+[TIMESTAMP NOT RECORDED] Part D HF benchmark
+  Source: metrics/part_d_hf_benchmark.json
+  Details: See source JSON
+
+[TIMESTAMP NOT RECORDED] Part D backend comparison
+  Source: metrics/part_d_backend_comparison.json
+  Details: precision=FP16
+
+IMPLEMENTATION AND TROUBLESHOOTING NOTES
+-----------------------------------------------------------------
+1. Baseline BERT fine-tuning completed successfully.
+2. Part A measured batch scaling and full-epoch throughput.
+3. Large batches showed substantial slowdown; no CUDA OOM
+   is claimed for the recorded runs.
+4. Part B compared FP32, BF16 AMP, checkpointing,
+   gradient accumulation, 8-bit AdamW, and combined mode.
+5. Part B FP32 baseline reused the Part A batch-64 result.
+6. Part C completed functional NCCL DDP with world_size=1.
+   Multi-GPU scaling was not measured.
+7. Part D used OPT-125m because BERT does not support
+   autoregressive generation with a causal KV cache.
+8. vLLM was installed in a separate virtual environment.
+9. Initial vLLM smoke test encountered CUDA fork issues;
+   using spawn resolved the worker initialization problem.
+10. vLLM and Hugging Face inference benchmarks completed.
+11. GPU-hour records were reconciled and deduplicated.
+
+FINAL DOCUMENTED METRICS
+-----------------------------------------------------------------
+Part A fastest batch: 64
+Part B fastest: BF16 AMP
+Part B lowest memory: Checkpointing
+Part C world size: 1
+Documented measured seconds: 563.198
+Documented measured GPU-hours: 0.156444
+
+GPU-HOURS LIMITATION
+-----------------------------------------------------------------
+The GPU-hours value is a subtotal of recorded measured
+execution intervals. It does not represent full GPU
+reservation or allocation time.
+
+Warm-ups, initialization, model loading, debugging,
+and idle reservation periods are not fully accounted for.
+
+Full GPU-hours require lab reservation or usage records.
+
+REPRODUCIBILITY
+-----------------------------------------------------------------
+Primary model: bert-base-uncased
+Part D model: facebook/opt-125m
+Main training precision: FP32
+Optimized training precision: BF16 AMP
+Part D inference precision: FP16
+Dataset: TweetEval sentiment
+Seed: 1980
+
+Supporting artifacts:
+  METRICS.md
+  PART_A_SUMMARY.md
+  PART_B_SUMMARY.md
+  PART_C_SUMMARY.md
+  PART_D_KV_CACHE_SUMMARY.md
+  PART_D_BACKEND_SUMMARY.md
+  metrics/part_e_final_metrics.json
+
+END OF RUN LOG
+
+
+GPU RESERVATION ACCOUNTING (STUDENT-REPORTED)
+
+- Reported total GPU reservation: 6.000 hours
+- GPU count: 1
+- Reported total GPU-hours: 6.000
+- Source: Student-reported; not verified against lab records
+- Documented benchmark execution: 0.156444 GPU-hours
