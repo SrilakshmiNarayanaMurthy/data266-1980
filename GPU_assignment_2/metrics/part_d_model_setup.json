@@ -1,0 +1,11 @@
+{
+    "model_id": "facebook/opt-125m",
+    "local_path": "/app/HW4_5_GPU_Assignment/models/opt_125m",
+    "model_type": "opt",
+    "is_encoder_decoder": false,
+    "can_generate": true,
+    "vocab_size": 50265,
+    "max_position_embeddings": 2048,
+    "parameters": 125239296,
+    "verified": true
+}

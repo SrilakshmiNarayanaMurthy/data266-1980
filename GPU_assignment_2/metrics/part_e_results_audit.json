@@ -1,0 +1,118 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "file_status": {
+    "Part A summary": true,
+    "Part B summary": true,
+    "Part C summary": true,
+    "Part D KV summary": true,
+    "Part D backend summary": true,
+    "Part D vLLM results": true,
+    "Part D HF results": true,
+    "Part D comparison": true,
+    "Part D KV benchmark": true,
+    "Part C DDP result": true
+  },
+  "all_required_files_present": true,
+  "part_b_configurations": [
+    {
+      "configuration": "FP32 baseline",
+      "epoch_seconds": 7.522,
+      "throughput": 465.315,
+      "peak_allocated_gib": 10.235,
+      "speedup_vs_fp32": 1.0
+    },
+    {
+      "configuration": "BF16 AMP",
+      "epoch_seconds": 4.555,
+      "throughput": 768.428,
+      "peak_allocated_gib": 8.431,
+      "speedup_vs_fp32": 1.651372118551043
+    },
+    {
+      "configuration": "Gradient checkpointing",
+      "epoch_seconds": 10.166,
+      "throughput": 344.271,
+      "peak_allocated_gib": 5.176,
+      "speedup_vs_fp32": 0.7399173716309266
+    },
+    {
+      "configuration": "Gradient accumulation x4",
+      "epoch_seconds": 7.328,
+      "throughput": 477.62,
+      "peak_allocated_gib": 10.661,
+      "speedup_vs_fp32": 1.0264737991266375
+    },
+    {
+      "configuration": "8-bit AdamW",
+      "epoch_seconds": 7.767,
+      "throughput": 450.641,
+      "peak_allocated_gib": 10.037,
+      "speedup_vs_fp32": 0.9684562894296382
+    },
+    {
+      "configuration": "Combined optimization",
+      "epoch_seconds": 5.009,
+      "throughput": 698.764,
+      "peak_allocated_gib": 5.254,
+      "speedup_vs_fp32": 1.5016969454981033
+    }
+  ],
+  "fastest_training_configuration": {
+    "configuration": "BF16 AMP",
+    "epoch_seconds": 4.555,
+    "throughput": 768.428,
+    "peak_allocated_gib": 8.431,
+    "speedup_vs_fp32": 1.651372118551043
+  },
+  "lowest_memory_training_configuration": {
+    "configuration": "Gradient checkpointing",
+    "epoch_seconds": 10.166,
+    "throughput": 344.271,
+    "peak_allocated_gib": 5.176,
+    "speedup_vs_fp32": 0.7399173716309266
+  },
+  "part_d_backend_comparison": [
+    {
+      "batch_size": 1,
+      "vllm_tokens_per_second": 141.73516074420624,
+      "hf_tokens_per_second": 172.64218215328245,
+      "vllm_throughput_speedup": 0.8209764205735361,
+      "vllm_p50_ms": 235.9431160002714,
+      "hf_p50_ms": 177.53766299938434,
+      "vllm_p95_ms": 308.5259142000723,
+      "hf_p95_ms": 219.0654094003548
+    },
+    {
+      "batch_size": 8,
+      "vllm_tokens_per_second": 1497.4305308765745,
+      "hf_tokens_per_second": 498.37277104650514,
+      "vllm_throughput_speedup": 3.004639534644326,
+      "vllm_p50_ms": 165.51894000076572,
+      "hf_p50_ms": 621.6386790001707,
+      "vllm_p95_ms": 201.11221700062742,
+      "hf_p95_ms": 665.6011302005936
+    },
+    {
+      "batch_size": 32,
+      "vllm_tokens_per_second": 6050.741582730896,
+      "hf_tokens_per_second": 1640.8251111621948,
+      "vllm_throughput_speedup": 3.68762127149868,
+      "vllm_p50_ms": 162.24374800003716,
+      "hf_p50_ms": 623.4159989999171,
+      "vllm_p95_ms": 189.59161699967808,
+      "hf_p95_ms": 630.520900398551
+    }
+  ],
+  "recorded_gpu_hours_unadjusted": 0.031613333333333334,
+  "recorded_gpu_hours_is_final_total": false,
+  "gpu_hours_accounting_gaps": [
+    "Part A ten-step batch-scaling benchmark durations",
+    "Part D KV-cache benchmark full execution duration",
+    "Part D vLLM inference trial durations",
+    "Part D Hugging Face inference trial durations",
+    "Model loading and GPU initialization durations",
+    "Warm-up execution durations",
+    "Possible overlap between Part A and Part B runs",
+    "Unrecorded debugging and GPU-active setup time"
+  ]
+}

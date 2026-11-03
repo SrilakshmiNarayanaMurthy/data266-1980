@@ -1,0 +1,83 @@
+{
+    "part": "B",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "experiment_count": 6,
+    "fastest_configuration": "BF16 AMP",
+    "fastest_throughput": 768.4279194560173,
+    "lowest_memory_configuration": "Checkpointing",
+    "lowest_peak_allocated_gib": 5.176101207733154,
+    "experiments": [
+        {
+            "configuration": "FP32 Baseline",
+            "epoch_seconds": 7.521791674999804,
+            "throughput_ex_per_sec": 465.3146685294353,
+            "peak_allocated_gib": 10.234943866729736,
+            "peak_reserved_gib": 10.623046875,
+            "average_loss": 0.3831568328653063,
+            "effective_batch_size": 64,
+            "speedup_vs_fp32": 1.0,
+            "memory_reduction_percent": 0.0
+        },
+        {
+            "configuration": "BF16 AMP",
+            "epoch_seconds": 4.554753817999881,
+            "throughput_ex_per_sec": 768.4279194560173,
+            "peak_allocated_gib": 8.430986881256104,
+            "peak_reserved_gib": 8.76953125,
+            "average_loss": 0.38308804770878385,
+            "effective_batch_size": 64,
+            "speedup_vs_fp32": 1.651415636400483,
+            "memory_reduction_percent": 17.625470241587482
+        },
+        {
+            "configuration": "Checkpointing",
+            "epoch_seconds": 10.166402485000617,
+            "throughput_ex_per_sec": 344.2712409983626,
+            "peak_allocated_gib": 5.176101207733154,
+            "peak_reserved_gib": 6.13671875,
+            "average_loss": 0.38315683286530633,
+            "effective_batch_size": 64,
+            "speedup_vs_fp32": 0.7398675869952386,
+            "memory_reduction_percent": 49.427165648080695
+        },
+        {
+            "configuration": "Accumulation x4",
+            "epoch_seconds": 7.327996328000154,
+            "throughput_ex_per_sec": 477.62032666781744,
+            "peak_allocated_gib": 10.660689353942871,
+            "peak_reserved_gib": 10.92578125,
+            "average_loss": 0.39528836447852,
+            "effective_batch_size": 256,
+            "speedup_vs_fp32": 1.0264458848401932,
+            "memory_reduction_percent": -4.159724691769792
+        },
+        {
+            "configuration": "8-bit AdamW",
+            "epoch_seconds": 7.766710869000235,
+            "throughput_ex_per_sec": 450.6412120952991,
+            "peak_allocated_gib": 10.037280559539795,
+            "peak_reserved_gib": 10.291015625,
+            "average_loss": 0.38319958571025303,
+            "effective_batch_size": 64,
+            "speedup_vs_fp32": 0.9684655193000692,
+            "memory_reduction_percent": 1.9312593187000904
+        },
+        {
+            "configuration": "Combined",
+            "epoch_seconds": 5.008845110000038,
+            "throughput_ex_per_sec": 698.7638713387911,
+            "peak_allocated_gib": 5.254399299621582,
+            "peak_reserved_gib": 5.6328125,
+            "average_loss": 0.3952856444971902,
+            "effective_batch_size": 256,
+            "speedup_vs_fp32": 1.5017017914933581,
+            "memory_reduction_percent": 48.66215811205553
+        }
+    ],
+    "figures": [
+        "/app/HW4_5_GPU_Assignment/figures/part_b_throughput_comparison.png",
+        "/app/HW4_5_GPU_Assignment/figures/part_b_memory_comparison.png",
+        "/app/HW4_5_GPU_Assignment/figures/part_b_epoch_time_comparison.png"
+    ],
+    "timestamp": "2026-10-26T23:09:36.654906"
+}

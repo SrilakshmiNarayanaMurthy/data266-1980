@@ -1,0 +1,56 @@
+[
+  {
+    "configuration": "FP32 Baseline",
+    "training_epochs": 1,
+    "physical_batch_size": 64,
+    "effective_batch_size": 64,
+    "test_examples": 750,
+    "correct_predictions": 526,
+    "eval_accuracy": 0.7013333333333334
+  },
+  {
+    "configuration": "BF16 AMP",
+    "training_epochs": 1,
+    "physical_batch_size": 64,
+    "effective_batch_size": 64,
+    "test_examples": 750,
+    "correct_predictions": 524,
+    "eval_accuracy": 0.6986666666666667
+  },
+  {
+    "configuration": "Checkpointing",
+    "training_epochs": 1,
+    "physical_batch_size": 64,
+    "effective_batch_size": 64,
+    "test_examples": 750,
+    "correct_predictions": 526,
+    "eval_accuracy": 0.7013333333333334
+  },
+  {
+    "configuration": "Accumulation x4",
+    "training_epochs": 1,
+    "physical_batch_size": 64,
+    "effective_batch_size": 256,
+    "test_examples": 750,
+    "correct_predictions": 527,
+    "eval_accuracy": 0.7026666666666667
+  },
+  {
+    "configuration": "8-bit AdamW",
+    "training_epochs": 1,
+    "physical_batch_size": 64,
+    "effective_batch_size": 64,
+    "test_examples": 750,
+    "correct_predictions": 526,
+    "eval_accuracy": 0.7013333333333334
+  },
+  {
+    "configuration": "Combined",
+    "training_epochs": 1,
+    "physical_batch_size": 64,
+    "effective_batch_size": 256,
+    "test_examples": 750,
+    "correct_predictions": 526,
+    "eval_accuracy": 0.7013333333333334
+  }
+]

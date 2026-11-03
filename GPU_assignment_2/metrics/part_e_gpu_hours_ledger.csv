@@ -1,0 +1,13 @@
+activity,recorded_seconds,gpu_count,source,gpu_hours
+BERT baseline training,36.66,1,Baseline training output,0.010183333333333332
+Part A batch-size epoch 16,10.137,1,Part A epoch benchmark,0.0028158333333333334
+Part A batch-size epoch 32,8.693,1,Part A epoch benchmark,0.002414722222222222
+Part A batch-size epoch 64,7.522,1,Part A epoch benchmark,0.0020894444444444446
+Part A batch-size epoch 128,7.921,1,Part A epoch benchmark,0.002200277777777778
+Part C single-GPU DDP test,0.528,1,Part C DDP result,0.00014666666666666666
+Part B FP32 baseline,7.522,1,Part B comparison,0.0020894444444444446
+Part B BF16 AMP,4.555,1,Part B comparison,0.0012652777777777777
+Part B Gradient checkpointing,10.166,1,Part B comparison,0.002823888888888889
+Part B Gradient accumulation x4,7.328,1,Part B comparison,0.0020355555555555556
+Part B 8-bit AdamW,7.767,1,Part B comparison,0.0021575
+Part B Combined optimization,5.009,1,Part B comparison,0.001391388888888889

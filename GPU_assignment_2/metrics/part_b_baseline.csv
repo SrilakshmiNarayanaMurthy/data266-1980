@@ -1,0 +1,2 @@
+experiment,part,gpu,physical_batch_size,effective_batch_size,epochs,training_examples,precision,amp,gradient_checkpointing,gradient_accumulation_steps,optimizer,epoch_seconds,examples_per_second,average_loss,peak_allocated_gib,peak_reserved_gib,source,timestamp
+baseline,B,NVIDIA GeForce RTX 4090,64,64,1,3500,FP32,False,False,1,AdamW,7.521791674999804,465.3146685294353,0.3831568328653063,10.234943866729736,10.623046875,part_a_full_epoch_comparison.csv,2026-10-26T22:56:48.938976

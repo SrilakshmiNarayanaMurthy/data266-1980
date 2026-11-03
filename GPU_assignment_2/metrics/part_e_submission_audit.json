@@ -1,0 +1,36 @@
+{
+  "required_files_present": 19,
+  "required_files_total": 19,
+  "required_file_checks": {
+    "METRICS.md": true,
+    "RUN_LOG.txt": true,
+    "AI_USE.md": true,
+    "PART_A_SUMMARY.md": true,
+    "PART_B_SUMMARY.md": true,
+    "PART_C_SUMMARY.md": true,
+    "PART_D_KV_CACHE_SUMMARY.md": true,
+    "PART_D_BACKEND_SUMMARY.md": true,
+    "metrics/hw4a_baseline_summary.json": true,
+    "metrics/part_a_batch_scaling.json": true,
+    "metrics/part_a_full_epoch_comparison.json": true,
+    "metrics/part_b_comparison.json": true,
+    "metrics/part_c_single_gpu_ddp.json": true,
+    "metrics/part_d_kv_cache_benchmark.json": true,
+    "metrics/part_d_vllm_benchmark.json": true,
+    "metrics/part_d_hf_benchmark.json": true,
+    "metrics/part_d_backend_comparison.json": true,
+    "metrics/part_e_final_metrics.json": true,
+    "metrics/part_e_gpu_hours_final.csv": true
+  },
+  "notebooks": [],
+  "figure_count": 15,
+  "log_file_count": 4,
+  "git": {
+    "repository_detected": false
+  },
+  "documented_measured_gpu_hours": 0.15644400786249965,
+  "full_reservation_gpu_hours_verified": false,
+  "assignment_specification_crosscheck_completed": false,
+  "submission_ready": false,
+  "note": "File presence is verified, but assignment rubric, notebook execution, and Git submission requirements still require review."
+}

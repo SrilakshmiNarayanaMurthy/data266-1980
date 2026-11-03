@@ -1,0 +1,43 @@
+activity,seconds,gpu_count,gpu_hours,source,status
+BERT baseline training,36.66,1,0.010183333,Baseline training output,recorded_included
+Part A batch-size epoch 16,10.137,1,0.002815833,Part A epoch benchmark,recorded_included
+Part A batch-size epoch 32,8.693,1,0.002414722,Part A epoch benchmark,recorded_included
+Part A batch-size epoch 64,7.522,1,0.002089444,Part A epoch benchmark,possible_overlap_excluded
+Part A batch-size epoch 128,7.921,1,0.002200278,Part A epoch benchmark,recorded_included
+Part C single-GPU DDP test,0.528,1,0.000146667,Part C DDP result,recorded_included
+Part B FP32 baseline,7.522,1,0.002089444,Part B comparison,possible_overlap_excluded
+Part B BF16 AMP,4.555,1,0.001265278,Part B comparison,recorded_included
+Part B Gradient checkpointing,10.166,1,0.002823889,Part B comparison,recorded_included
+Part B Gradient accumulation x4,7.328,1,0.002035556,Part B comparison,recorded_included
+Part B 8-bit AdamW,7.767,1,0.0021575,Part B comparison,recorded_included
+Part B Combined optimization,5.009,1,0.001391389,Part B comparison,recorded_included
+Part D vLLM batch 1 trial 1,0.313843,1,8.7179e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 1 trial 2,0.235943,1,6.554e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 1 trial 3,0.287256,1,7.9793e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 1 trial 4,0.12236,1,3.3989e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 1 trial 5,0.169463,1,4.7073e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 8 trial 1,0.136793,1,3.7998e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 8 trial 2,0.165519,1,4.5977e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 8 trial 3,0.204651,1,5.6848e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 8 trial 4,0.186956,1,5.1932e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 8 trial 5,0.160878,1,4.4688e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 32 trial 1,0.160052,1,4.4459e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 32 trial 2,0.151473,1,4.2076e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 32 trial 3,0.18056,1,5.0155e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 32 trial 4,0.19185,1,5.3292e-05,part_d_vllm_benchmark.json,recorded_included
+Part D vLLM batch 32 trial 5,0.162244,1,4.5068e-05,part_d_vllm_benchmark.json,recorded_included
+Part D Hugging Face batch 1 trial 1,0.18171,1,5.0475e-05,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 1 trial 2,0.164451,1,4.5681e-05,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 1 trial 3,0.177538,1,4.9316e-05,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 1 trial 4,0.174669,1,4.8519e-05,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 1 trial 5,0.228404,1,6.3446e-05,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 8 trial 1,0.655291,1,0.000182025,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 8 trial 2,0.668179,1,0.000185605,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 8 trial 3,0.621639,1,0.000172677,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 8 trial 4,0.464736,1,0.000129093,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 8 trial 5,0.158514,1,4.4032e-05,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 32 trial 1,0.618662,1,0.000171851,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 32 trial 2,0.622141,1,0.000172817,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 32 trial 3,0.632147,1,0.000175597,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 32 trial 4,0.624015,1,0.000173337,part_d_hf_benchmark.json,recorded_included
+Part D Hugging Face batch 32 trial 5,0.623416,1,0.000173171,part_d_hf_benchmark.json,recorded_included

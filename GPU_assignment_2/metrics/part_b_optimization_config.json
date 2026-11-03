@@ -1,0 +1,79 @@
+{
+    "part": "B",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "model_checkpoint": "/app/HW4_5_GPU_Assignment/models/bert_best",
+    "training_tensors": "/app/HW4_5_GPU_Assignment/tokenized_tensors/train_tensors.pt",
+    "bf16_supported": true,
+    "bitsandbytes_available": false,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "experiments": [
+        {
+            "name": "baseline",
+            "amp": false,
+            "gradient_checkpointing": false,
+            "accumulation_steps": 1,
+            "optimizer": "adamw",
+            "physical_batch_size": 64,
+            "effective_batch_size": 64,
+            "epochs": 1,
+            "seed": 1980
+        },
+        {
+            "name": "amp_bf16",
+            "amp": true,
+            "gradient_checkpointing": false,
+            "accumulation_steps": 1,
+            "optimizer": "adamw",
+            "physical_batch_size": 64,
+            "effective_batch_size": 64,
+            "epochs": 1,
+            "seed": 1980
+        },
+        {
+            "name": "gradient_checkpointing",
+            "amp": false,
+            "gradient_checkpointing": true,
+            "accumulation_steps": 1,
+            "optimizer": "adamw",
+            "physical_batch_size": 64,
+            "effective_batch_size": 64,
+            "epochs": 1,
+            "seed": 1980
+        },
+        {
+            "name": "gradient_accumulation",
+            "amp": false,
+            "gradient_checkpointing": false,
+            "accumulation_steps": 4,
+            "optimizer": "adamw",
+            "physical_batch_size": 64,
+            "effective_batch_size": 256,
+            "epochs": 1,
+            "seed": 1980
+        },
+        {
+            "name": "adamw_8bit",
+            "amp": false,
+            "gradient_checkpointing": false,
+            "accumulation_steps": 1,
+            "optimizer": "adamw8bit",
+            "physical_batch_size": 64,
+            "effective_batch_size": 64,
+            "epochs": 1,
+            "seed": 1980
+        },
+        {
+            "name": "combined",
+            "amp": true,
+            "gradient_checkpointing": true,
+            "accumulation_steps": 4,
+            "optimizer": "adamw8bit",
+            "physical_batch_size": 64,
+            "effective_batch_size": 256,
+            "epochs": 1,
+            "seed": 1980
+        }
+    ],
+    "timestamp": "2026-10-26T22:55:55.759413"
+}

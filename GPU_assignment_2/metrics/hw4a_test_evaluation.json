@@ -1,0 +1,86 @@
+{
+    "checkpoint": "/app/HW4_5_GPU_Assignment/models/bert_best",
+    "best_epoch": 2,
+    "test_accuracy": 0.7146666666666667,
+    "confusion_matrix": [
+        [
+            74,
+            34,
+            10
+        ],
+        [
+            27,
+            231,
+            82
+        ],
+        [
+            6,
+            55,
+            231
+        ]
+    ],
+    "per_class": {
+        "negative": {
+            "precision": 0.6915887850467289,
+            "recall": 0.6271186440677966,
+            "f1": 0.6577777777777778,
+            "support": 118
+        },
+        "neutral": {
+            "precision": 0.721875,
+            "recall": 0.6794117647058824,
+            "f1": 0.7,
+            "support": 340
+        },
+        "positive": {
+            "precision": 0.7151702786377709,
+            "recall": 0.791095890410959,
+            "f1": 0.751219512195122,
+            "support": 292
+        }
+    },
+    "worst_class": "negative",
+    "misclassified_examples": [
+        {
+            "test_index": 34,
+            "original_row": 2034,
+            "text": "You may remember Frank Gifford as a great football player or broadcaster. But I remember him as the guy who wanted anal from a stewardess",
+            "true_label": "negative",
+            "predicted_label": "neutral",
+            "predicted_confidence": 0.6920323967933655
+        },
+        {
+            "test_index": 46,
+            "original_row": 1844,
+            "text": "Why does she hella look like a mix of Jennifer Lawrence and Caitlyn Jenner in the 2nd pic omg",
+            "true_label": "negative",
+            "predicted_label": "neutral",
+            "predicted_confidence": 0.6610641479492188
+        },
+        {
+            "test_index": 48,
+            "original_row": 2982,
+            "text": "Capello Bemoans Language Barrier in Russia: Russia coach Fabio Capello spoke Monday of his frustration at the la...",
+            "true_label": "negative",
+            "predicted_label": "neutral",
+            "predicted_confidence": 0.6588835716247559
+        },
+        {
+            "test_index": 66,
+            "original_row": 3351,
+            "text": "@user Apples innovation died or stopped with iPhone 3. 120 billion in cash c'mon man redistribute the wealth .",
+            "true_label": "negative",
+            "predicted_label": "neutral",
+            "predicted_confidence": 0.7628729939460754
+        },
+        {
+            "test_index": 68,
+            "original_row": 5251,
+            "text": "i probably failed my exam today but at least i was the 5th like on Kim Kardashian's insta pic",
+            "true_label": "negative",
+            "predicted_label": "positive",
+            "predicted_confidence": 0.6429905891418457
+        }
+    ],
+    "timestamp": "2026-10-26T21:35:02.256396"
+}

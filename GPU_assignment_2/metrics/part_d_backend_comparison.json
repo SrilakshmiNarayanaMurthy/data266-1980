@@ -1,0 +1,51 @@
+{
+  "model": "facebook/opt-125m",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "precision": "FP16",
+  "prompt_tokens_per_request": 128,
+  "generated_tokens_per_request": 32,
+  "warmup_runs_per_batch": 1,
+  "measured_trials_per_batch": 5,
+  "results": [
+    {
+      "batch_size": 1,
+      "vllm_tokens_per_second": 141.73516074420624,
+      "hf_tokens_per_second": 172.64218215328245,
+      "vllm_throughput_speedup": 0.8209764205735361,
+      "vllm_p50_ms": 235.9431160002714,
+      "hf_p50_ms": 177.53766299938434,
+      "vllm_p95_ms": 308.5259142000723,
+      "hf_p95_ms": 219.0654094003548
+    },
+    {
+      "batch_size": 8,
+      "vllm_tokens_per_second": 1497.4305308765745,
+      "hf_tokens_per_second": 498.37277104650514,
+      "vllm_throughput_speedup": 3.004639534644326,
+      "vllm_p50_ms": 165.51894000076572,
+      "hf_p50_ms": 621.6386790001707,
+      "vllm_p95_ms": 201.11221700062742,
+      "hf_p95_ms": 665.6011302005936
+    },
+    {
+      "batch_size": 32,
+      "vllm_tokens_per_second": 6050.741582730896,
+      "hf_tokens_per_second": 1640.8251111621948,
+      "vllm_throughput_speedup": 3.68762127149868,
+      "vllm_p50_ms": 162.24374800003716,
+      "hf_p50_ms": 623.4159989999171,
+      "vllm_p95_ms": 189.59161699967808,
+      "hf_p95_ms": 630.520900398551
+    }
+  ],
+  "limitations": [
+    "vLLM uses FlashAttention; HF uses eager attention.",
+    "vLLM runs in eager execution mode.",
+    "Both backends use KV caching.",
+    "WSL pin-memory warning occurred for vLLM.",
+    "Batch latency is not per-request latency.",
+    "HF and vLLM memory metrics are not equivalent.",
+    "HF batch-8 trial 5 was substantially faster than the other four trials.",
+    "Results apply to OPT-125M and this test setup."
+  ]
+}

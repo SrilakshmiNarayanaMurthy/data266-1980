@@ -1,0 +1,19 @@
+{
+    "framework": "huggingface_pipeline",
+    "model": "bert-base-uncased",
+    "checkpoint": "/app/HW4_5_GPU_Assignment/models/bert_best",
+    "batch_size": 1,
+    "precision": "FP32",
+    "samples": 750,
+    "active_tokens": 22466,
+    "total_wall_time_seconds": 4.150299890999577,
+    "mean_latency_ms": 5.302323381327369,
+    "p50_latency_ms": 4.7415905000889325,
+    "p95_latency_ms": 7.836495749961611,
+    "samples_per_second": 180.70983295121997,
+    "tokens_per_second": 5413.102809442811,
+    "accuracy": 0.7146666666666667,
+    "peak_allocated_gpu_memory_gb": 2.906388282775879,
+    "peak_reserved_gpu_memory_gb": 3.10546875,
+    "timestamp": "2026-10-26T21:46:25.972527"
+}

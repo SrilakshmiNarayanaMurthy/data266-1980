@@ -1,0 +1,198 @@
+{
+  "kv_cache": {
+    "result_count": 12,
+    "warmup_runs": 1,
+    "measured_runs": 3,
+    "result_field_sets": [
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ],
+      [
+        "context_tokens",
+        "generated_tokens",
+        "kv_cache",
+        "mean_latency_seconds",
+        "p50_latency_seconds",
+        "tokens_per_second",
+        "peak_allocated_gib",
+        "measured_runs",
+        "precision"
+      ]
+    ]
+  },
+  "potential_timing_files": [
+    "hw4a_baseline_summary.json",
+    "hw4a_hf_inference_batch1.json",
+    "hw4a_hf_pipeline_batch1.json",
+    "hw4a_training_history.json",
+    "part_a_batch128_full_epoch.json",
+    "part_a_batch_scaling.csv",
+    "part_a_batch_scaling.json",
+    "part_a_full_epoch_comparison.csv",
+    "part_a_full_epoch_comparison.json",
+    "part_a_memory_diagnostics.json",
+    "part_a_performance_summary.json",
+    "part_a_scaling_config.json",
+    "part_b_8bit_dependency_check.json",
+    "part_b_adamw_8bit.csv",
+    "part_b_adamw_8bit.json",
+    "part_b_amp_bf16.csv",
+    "part_b_amp_bf16.json",
+    "part_b_baseline.csv",
+    "part_b_baseline.json",
+    "part_b_combined.csv",
+    "part_b_combined.json",
+    "part_b_comparison.csv",
+    "part_b_comparison.json",
+    "part_b_gradient_accumulation.csv",
+    "part_b_gradient_accumulation.json",
+    "part_b_gradient_checkpointing.csv",
+    "part_b_gradient_checkpointing.json",
+    "part_b_optimization_config.json",
+    "part_c_ddp_readiness.json",
+    "part_c_single_gpu_ddp.json"
+  ],
+  "possible_overlaps": [
+    {
+      "activity": "Part A batch-size epoch 64",
+      "seconds": "7.522",
+      "gpu_count": "1",
+      "gpu_hours": "0.002089444",
+      "source": "Part A epoch benchmark",
+      "status": "possible_overlap_excluded"
+    },
+    {
+      "activity": "Part B FP32 baseline",
+      "seconds": "7.522",
+      "gpu_count": "1",
+      "gpu_hours": "0.002089444",
+      "source": "Part B comparison",
+      "status": "possible_overlap_excluded"
+    }
+  ],
+  "reservation_candidates": [
+    "PART_E_GPU_HOURS.md",
+    "logs/hw4a_training_RUN_LOG.txt",
+    "metrics/part_e_gpu_hours_ledger.csv",
+    "metrics/part_e_gpu_hours_reconciliation.csv",
+    "metrics/part_e_gpu_hours_reconciliation.json"
+  ]
+}

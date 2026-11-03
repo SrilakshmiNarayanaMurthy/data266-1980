@@ -1,0 +1,205 @@
+{
+  "hw4a_baseline_summary.json": {
+    "type": "dict",
+    "keys": [
+      "model",
+      "gpu",
+      "precision",
+      "train_batch_size",
+      "epochs",
+      "train_samples",
+      "best_epoch",
+      "best_val_loss",
+      "final_val_accuracy",
+      "peak_allocated_gb",
+      "peak_reserved_gb",
+      "wall_clock_seconds",
+      "start_time",
+      "end_time"
+    ],
+    "preview": {
+      "model": "bert-base-uncased",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "precision": "FP32",
+      "train_batch_size": 16,
+      "epochs": 3,
+      "train_samples": 3500,
+      "best_epoch": 2,
+      "best_val_loss": 0.7152195054690044,
+      "final_val_accuracy": 0.6693333333333333,
+      "peak_allocated_gb": 2.7957820892333984,
+      "peak_reserved_gb": 3.099609375,
+      "wall_clock_seconds": 36.66233051099971,
+      "start_time": "2026-10-26T21:30:24.532161",
+      "end_time": "2026-10-26T21:31:01.188157"
+    }
+  },
+  "part_a_batch_scaling.json": {
+    "type": "list",
+    "length": 10,
+    "first_entry": "{'batch_size': 1, 'status': 'PASS', 'warmup_steps': 2, 'measured_steps': 10, 'examples_per_second': 36.299965300456925, 'mean_step_ms': 27.54823570003282, 'median_step_ms': 26.60501899981682, 'peak_allocated_gb': 4.947324275970459, 'peak_reserved_gb': 5.33984375, 'mean_loss': 0.49145391806960104}"
+  },
+  "part_a_full_epoch_comparison.json": {
+    "type": "list",
+    "length": 4,
+    "first_entry": "{'batch_size': 16, 'epoch_seconds': 10.137315207000029, 'examples_per_second': 345.259067961424, 'average_loss': 0.420783527135849, 'peak_allocated_gib': 5.672229766845703, 'peak_reserved_gib': 5.91796875, 'examples': 3500, 'precision': 'FP32', 'seed': 1980, 'timestamp': '2026-10-26T22:49:26.979713'}"
+  },
+  "part_a_batch128_full_epoch.json": {
+    "type": "dict",
+    "keys": [
+      "batch_size",
+      "epochs",
+      "examples",
+      "epoch_seconds",
+      "examples_per_second",
+      "average_loss",
+      "peak_allocated_gib",
+      "peak_reserved_gib",
+      "precision",
+      "seed",
+      "timestamp"
+    ],
+    "preview": {
+      "batch_size": 128,
+      "epochs": 1,
+      "examples": 3500,
+      "epoch_seconds": 7.921266724999441,
+      "examples_per_second": 441.8485226553518,
+      "average_loss": 0.3971626296383994,
+      "peak_allocated_gib": 16.341268062591553,
+      "peak_reserved_gib": 16.62109375,
+      "precision": "FP32",
+      "seed": 1980,
+      "timestamp": "2026-10-26T22:45:00.502473"
+    }
+  },
+  "part_b_baseline.json": {
+    "type": "dict",
+    "keys": [
+      "experiment",
+      "part",
+      "gpu",
+      "physical_batch_size",
+      "effective_batch_size",
+      "epochs",
+      "training_examples",
+      "precision",
+      "amp",
+      "gradient_checkpointing",
+      "gradient_accumulation_steps",
+      "optimizer",
+      "epoch_seconds",
+      "examples_per_second",
+      "average_loss",
+      "peak_allocated_gib",
+      "peak_reserved_gib",
+      "source",
+      "timestamp"
+    ],
+    "preview": {
+      "experiment": "baseline",
+      "part": "B",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "physical_batch_size": 64,
+      "effective_batch_size": 64,
+      "epochs": 1,
+      "training_examples": 3500,
+      "precision": "FP32",
+      "amp": false,
+      "gradient_checkpointing": false,
+      "gradient_accumulation_steps": 1,
+      "optimizer": "AdamW",
+      "epoch_seconds": 7.521791674999804,
+      "examples_per_second": 465.3146685294353,
+      "average_loss": 0.3831568328653063,
+      "peak_allocated_gib": 10.234943866729736,
+      "peak_reserved_gib": 10.623046875,
+      "source": "part_a_full_epoch_comparison.csv",
+      "timestamp": "2026-10-26T22:56:48.938976"
+    }
+  },
+  "part_b_comparison.json": {
+    "type": "dict",
+    "keys": [
+      "part",
+      "gpu",
+      "experiment_count",
+      "fastest_configuration",
+      "fastest_throughput",
+      "lowest_memory_configuration",
+      "lowest_peak_allocated_gib",
+      "experiments",
+      "figures",
+      "timestamp"
+    ],
+    "preview": {
+      "part": "B",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "experiment_count": 6,
+      "fastest_configuration": "BF16 AMP",
+      "fastest_throughput": 768.4279194560173,
+      "lowest_memory_configuration": "Checkpointing",
+      "lowest_peak_allocated_gib": 5.176101207733154,
+      "experiments": {
+        "type": "list",
+        "length": 6,
+        "first_entry": "{'configuration': 'FP32 Baseline', 'epoch_seconds': 7.521791674999804, 'throughput_ex_per_sec': 465.3146685294353, 'peak_allocated_gib': 10.234943866729736, 'peak_reserved_gib': 10.623046875, 'average_loss': 0.3831568328653063, 'effective_batch_size': 64, 'speedup_vs_fp32': 1.0, 'memory_reduction_percent': 0.0}"
+      },
+      "figures": {
+        "type": "list",
+        "length": 3,
+        "first_entry": "/app/HW4_5_GPU_Assignment/figures/part_b_throughput_comparison.png"
+      },
+      "timestamp": "2026-10-26T23:09:36.654906"
+    }
+  },
+  "part_b_amp_bf16.json": {
+    "type": "dict",
+    "keys": [
+      "experiment",
+      "part",
+      "gpu",
+      "physical_batch_size",
+      "effective_batch_size",
+      "epochs",
+      "training_examples",
+      "precision",
+      "amp",
+      "gradient_checkpointing",
+      "gradient_accumulation_steps",
+      "optimizer",
+      "epoch_seconds",
+      "examples_per_second",
+      "average_loss",
+      "peak_allocated_gib",
+      "peak_reserved_gib",
+      "speedup_vs_fp32",
+      "memory_reduction_percent",
+      "seed",
+      "timestamp"
+    ],
+    "preview": {
+      "experiment": "amp_bf16",
+      "part": "B",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "physical_batch_size": 64,
+      "effective_batch_size": 64,
+      "epochs": 1,
+      "training_examples": 3500,
+      "precision": "BF16 AMP",
+      "amp": true,
+      "gradient_checkpointing": false,
+      "gradient_accumulation_steps": 1,
+      "optimizer": "AdamW",
+      "epoch_seconds": 4.554753817999881,
+      "examples_per_second": 768.4279194560173,
+      "average_loss": 0.38308804770878385,
+      "peak_allocated_gib": 8.430986881256104,
+      "peak_reserved_gib": 8.76953125,
+      "speedup_vs_fp32": 1.651415636400483,
+      "memory_reduction_percent": 17.625470241587482,
+      "seed": 1980,
+      "timestamp": "2026-10-26T22:57:26.557713"
+    }
+  }
+}

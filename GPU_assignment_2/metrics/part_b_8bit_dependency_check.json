@@ -1,0 +1,11 @@
+{
+    "step": 35,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "torch_version": "2.1.2",
+    "bitsandbytes_version": "0.43.1",
+    "optimizer": "AdamW8bit",
+    "smoke_test_passed": true,
+    "state1_dtype": "torch.uint8",
+    "state2_dtype": "torch.uint8",
+    "timestamp": "2026-10-26T23:04:28.903924"
+}

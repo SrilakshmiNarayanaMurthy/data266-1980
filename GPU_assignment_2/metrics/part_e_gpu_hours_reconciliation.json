@@ -1,0 +1,359 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "recorded_included_seconds": 108.20935299999998,
+  "recorded_included_gpu_hours": 0.030058153611111107,
+  "possible_overlap_excluded_seconds": 15.044,
+  "possible_overlap_excluded_gpu_hours": 0.004178888888888889,
+  "kv_cache_timing_status": "Not included until individual recorded durations are verified from the file structure.",
+  "final_total_gpu_hours_verified": false,
+  "interpretation": "Subtotal of selected recorded execution intervals; not total GPU allocation or reservation time.",
+  "unaccounted_activities": [
+    "Part A batch-scaling microbenchmarks",
+    "Part D KV-cache benchmark intervals",
+    "Warm-up runs",
+    "vLLM engine startup and model loading",
+    "HF model loading",
+    "Earlier troubleshooting and smoke tests",
+    "GPU reservation idle periods",
+    "Any other GPU-active execution not logged"
+  ],
+  "records": [
+    {
+      "activity": "BERT baseline training",
+      "seconds": 36.66,
+      "gpu_count": 1,
+      "gpu_hours": 0.010183333,
+      "source": "Baseline training output",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part A batch-size epoch 16",
+      "seconds": 10.137,
+      "gpu_count": 1,
+      "gpu_hours": 0.002815833,
+      "source": "Part A epoch benchmark",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part A batch-size epoch 32",
+      "seconds": 8.693,
+      "gpu_count": 1,
+      "gpu_hours": 0.002414722,
+      "source": "Part A epoch benchmark",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part A batch-size epoch 64",
+      "seconds": 7.522,
+      "gpu_count": 1,
+      "gpu_hours": 0.002089444,
+      "source": "Part A epoch benchmark",
+      "status": "possible_overlap_excluded"
+    },
+    {
+      "activity": "Part A batch-size epoch 128",
+      "seconds": 7.921,
+      "gpu_count": 1,
+      "gpu_hours": 0.002200278,
+      "source": "Part A epoch benchmark",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part C single-GPU DDP test",
+      "seconds": 0.528,
+      "gpu_count": 1,
+      "gpu_hours": 0.000146667,
+      "source": "Part C DDP result",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part B FP32 baseline",
+      "seconds": 7.522,
+      "gpu_count": 1,
+      "gpu_hours": 0.002089444,
+      "source": "Part B comparison",
+      "status": "possible_overlap_excluded"
+    },
+    {
+      "activity": "Part B BF16 AMP",
+      "seconds": 4.555,
+      "gpu_count": 1,
+      "gpu_hours": 0.001265278,
+      "source": "Part B comparison",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part B Gradient checkpointing",
+      "seconds": 10.166,
+      "gpu_count": 1,
+      "gpu_hours": 0.002823889,
+      "source": "Part B comparison",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part B Gradient accumulation x4",
+      "seconds": 7.328,
+      "gpu_count": 1,
+      "gpu_hours": 0.002035556,
+      "source": "Part B comparison",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part B 8-bit AdamW",
+      "seconds": 7.767,
+      "gpu_count": 1,
+      "gpu_hours": 0.0021575,
+      "source": "Part B comparison",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part B Combined optimization",
+      "seconds": 5.009,
+      "gpu_count": 1,
+      "gpu_hours": 0.001391389,
+      "source": "Part B comparison",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 1",
+      "seconds": 0.313843,
+      "gpu_count": 1,
+      "gpu_hours": 8.7179e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 2",
+      "seconds": 0.235943,
+      "gpu_count": 1,
+      "gpu_hours": 6.554e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 3",
+      "seconds": 0.287256,
+      "gpu_count": 1,
+      "gpu_hours": 7.9793e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 4",
+      "seconds": 0.12236,
+      "gpu_count": 1,
+      "gpu_hours": 3.3989e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 5",
+      "seconds": 0.169463,
+      "gpu_count": 1,
+      "gpu_hours": 4.7073e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 1",
+      "seconds": 0.136793,
+      "gpu_count": 1,
+      "gpu_hours": 3.7998e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 2",
+      "seconds": 0.165519,
+      "gpu_count": 1,
+      "gpu_hours": 4.5977e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 3",
+      "seconds": 0.204651,
+      "gpu_count": 1,
+      "gpu_hours": 5.6848e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 4",
+      "seconds": 0.186956,
+      "gpu_count": 1,
+      "gpu_hours": 5.1932e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 5",
+      "seconds": 0.160878,
+      "gpu_count": 1,
+      "gpu_hours": 4.4688e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 1",
+      "seconds": 0.160052,
+      "gpu_count": 1,
+      "gpu_hours": 4.4459e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 2",
+      "seconds": 0.151473,
+      "gpu_count": 1,
+      "gpu_hours": 4.2076e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 3",
+      "seconds": 0.18056,
+      "gpu_count": 1,
+      "gpu_hours": 5.0155e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 4",
+      "seconds": 0.19185,
+      "gpu_count": 1,
+      "gpu_hours": 5.3292e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 5",
+      "seconds": 0.162244,
+      "gpu_count": 1,
+      "gpu_hours": 4.5068e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 1 trial 1",
+      "seconds": 0.18171,
+      "gpu_count": 1,
+      "gpu_hours": 5.0475e-05,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 1 trial 2",
+      "seconds": 0.164451,
+      "gpu_count": 1,
+      "gpu_hours": 4.5681e-05,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 1 trial 3",
+      "seconds": 0.177538,
+      "gpu_count": 1,
+      "gpu_hours": 4.9316e-05,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 1 trial 4",
+      "seconds": 0.174669,
+      "gpu_count": 1,
+      "gpu_hours": 4.8519e-05,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 1 trial 5",
+      "seconds": 0.228404,
+      "gpu_count": 1,
+      "gpu_hours": 6.3446e-05,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 8 trial 1",
+      "seconds": 0.655291,
+      "gpu_count": 1,
+      "gpu_hours": 0.000182025,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 8 trial 2",
+      "seconds": 0.668179,
+      "gpu_count": 1,
+      "gpu_hours": 0.000185605,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 8 trial 3",
+      "seconds": 0.621639,
+      "gpu_count": 1,
+      "gpu_hours": 0.000172677,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 8 trial 4",
+      "seconds": 0.464736,
+      "gpu_count": 1,
+      "gpu_hours": 0.000129093,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 8 trial 5",
+      "seconds": 0.158514,
+      "gpu_count": 1,
+      "gpu_hours": 4.4032e-05,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 32 trial 1",
+      "seconds": 0.618662,
+      "gpu_count": 1,
+      "gpu_hours": 0.000171851,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 32 trial 2",
+      "seconds": 0.622141,
+      "gpu_count": 1,
+      "gpu_hours": 0.000172817,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 32 trial 3",
+      "seconds": 0.632147,
+      "gpu_count": 1,
+      "gpu_hours": 0.000175597,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 32 trial 4",
+      "seconds": 0.624015,
+      "gpu_count": 1,
+      "gpu_hours": 0.000173337,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    },
+    {
+      "activity": "Part D Hugging Face batch 32 trial 5",
+      "seconds": 0.623416,
+      "gpu_count": 1,
+      "gpu_hours": 0.000173171,
+      "source": "part_d_hf_benchmark.json",
+      "status": "recorded_included"
+    }
+  ]
+}

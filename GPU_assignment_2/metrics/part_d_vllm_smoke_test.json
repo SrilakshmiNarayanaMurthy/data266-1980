@@ -1,0 +1,11 @@
+{
+    "model": "facebook/opt-125m",
+    "vllm_version": "0.11.2",
+    "multiprocessing_method": "spawn",
+    "engine_initialization_seconds": 99.61131831900093,
+    "generation_seconds": 0.22398946000066644,
+    "generated_tokens": 16,
+    "prompt": "Artificial intelligence in healthcare can help",
+    "generated_text": " doctors and nurses better understand patients' needs\n\nA new study from the University",
+    "success": true
+}

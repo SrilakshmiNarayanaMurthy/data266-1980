@@ -1,0 +1,20 @@
+{
+    "part": "C",
+    "status": "single_gpu_ddp_verified",
+    "gpu_count": 1,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "backend": "nccl",
+    "world_size": 1,
+    "training_examples": 128,
+    "optimizer_steps": 2,
+    "elapsed_seconds": 0.5275737239990121,
+    "throughput_ex_per_sec": 242.62011957259583,
+    "peak_allocated_gib": 11.112711906433105,
+    "single_gpu_ddp_functional": true,
+    "two_gpu_scaling_available": false,
+    "two_gpu_speedup": null,
+    "scaling_efficiency": null,
+    "inter_gpu_communication_overhead": null,
+    "limitation": "Only one RTX 4090 was available. A world_size=1 NCCL DDP training test succeeded. Two-GPU scaling and inter-GPU communication overhead were not measured.",
+    "timestamp": "2026-10-26T23:12:15.151815"
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "batch_size": 1,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 36.299965300456925,
+        "mean_step_ms": 27.54823570003282,
+        "median_step_ms": 26.60501899981682,
+        "peak_allocated_gb": 4.947324275970459,
+        "peak_reserved_gb": 5.33984375,
+        "mean_loss": 0.49145391806960104
+    },
+    {
+        "batch_size": 2,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 66.07968893959051,
+        "mean_step_ms": 30.266486300024553,
+        "median_step_ms": 28.986848500153428,
+        "peak_allocated_gb": 4.950988292694092,
+        "peak_reserved_gb": 5.376953125,
+        "mean_loss": 0.49056667014956473
+    },
+    {
+        "batch_size": 4,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 97.9530741204896,
+        "mean_step_ms": 40.8358801999384,
+        "median_step_ms": 47.85417250013779,
+        "peak_allocated_gb": 4.954410076141357,
+        "peak_reserved_gb": 5.298828125,
+        "mean_loss": 0.479943273961544
+    },
+    {
+        "batch_size": 8,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 250.03851140015036,
+        "mean_step_ms": 31.9950713000253,
+        "median_step_ms": 31.92329850025999,
+        "peak_allocated_gb": 4.983226299285889,
+        "peak_reserved_gb": 5.396484375,
+        "mean_loss": 0.4561105459928513
+    },
+    {
+        "batch_size": 16,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 354.78988980093703,
+        "mean_step_ms": 45.097113700103364,
+        "median_step_ms": 45.209274499939056,
+        "peak_allocated_gb": 5.67409610748291,
+        "peak_reserved_gb": 6.044921875,
+        "mean_loss": 0.41659399718046186
+    },
+    {
+        "batch_size": 32,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 405.8580938334777,
+        "mean_step_ms": 78.84529219991236,
+        "median_step_ms": 78.8407394998103,
+        "peak_allocated_gb": 7.226494789123535,
+        "peak_reserved_gb": 7.630859375,
+        "mean_loss": 0.3991430252790451
+    },
+    {
+        "batch_size": 64,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 471.0895944732083,
+        "mean_step_ms": 135.8552614000473,
+        "median_step_ms": 135.30368100009582,
+        "peak_allocated_gb": 10.237874507904053,
+        "peak_reserved_gb": 10.509765625,
+        "mean_loss": 0.4310105204582214
+    },
+    {
+        "batch_size": 128,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 474.33629244657396,
+        "mean_step_ms": 269.8507410002094,
+        "median_step_ms": 269.92085250003583,
+        "peak_allocated_gb": 16.34126901626587,
+        "peak_reserved_gb": 16.62109375,
+        "mean_loss": 0.40653597116470336
+    },
+    {
+        "batch_size": 256,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 48.17753517555369,
+        "mean_step_ms": 5313.679893900007,
+        "median_step_ms": 5310.389649000172,
+        "peak_allocated_gb": 28.42867374420166,
+        "peak_reserved_gb": 28.98828125,
+        "mean_loss": 0.3930858880281448
+    },
+    {
+        "batch_size": 512,
+        "status": "PASS",
+        "warmup_steps": 2,
+        "measured_steps": 10,
+        "examples_per_second": 13.483835159817625,
+        "mean_step_ms": 37971.39270330008,
+        "median_step_ms": 37953.591362000225,
+        "peak_allocated_gb": 52.62455749511719,
+        "peak_reserved_gb": 53.720703125,
+        "mean_loss": 0.3673536658287048
+    }
+]

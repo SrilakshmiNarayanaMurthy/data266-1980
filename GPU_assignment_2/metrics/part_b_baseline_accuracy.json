@@ -1,0 +1,7 @@
+{
+  "configuration": "HW4.a saved baseline",
+  "test_examples": 750,
+  "correct_predictions": 536,
+  "test_accuracy": 0.7146666666666667,
+  "note": "Accuracy of saved HW4.a model only; not an independently trained Part B configuration."
+}

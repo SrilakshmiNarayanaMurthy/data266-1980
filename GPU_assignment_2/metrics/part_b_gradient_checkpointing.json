@@ -1,0 +1,23 @@
+{
+    "experiment": "gradient_checkpointing",
+    "part": "B",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "physical_batch_size": 64,
+    "effective_batch_size": 64,
+    "epochs": 1,
+    "training_examples": 3500,
+    "precision": "FP32",
+    "amp": false,
+    "gradient_checkpointing": true,
+    "gradient_accumulation_steps": 1,
+    "optimizer": "AdamW",
+    "epoch_seconds": 10.166402485000617,
+    "examples_per_second": 344.2712409983626,
+    "average_loss": 0.38315683286530633,
+    "peak_allocated_gib": 5.176101207733154,
+    "peak_reserved_gib": 6.13671875,
+    "speedup_vs_fp32": 0.7398675869952386,
+    "memory_reduction_percent": 49.427165648080695,
+    "seed": 1980,
+    "timestamp": "2026-10-26T22:58:55.240531"
+}

@@ -1,0 +1,26 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "previous_included_seconds": 108.20935299999998,
+  "kv_cache_measured_seconds": 8.011835771998449,
+  "revised_documented_seconds": 116.22118877199843,
+  "revised_documented_gpu_hours": 0.03228366354777734,
+  "potential_overlap_excluded_seconds": 15.044,
+  "final_reservation_gpu_hours_verified": false,
+  "scope": "Selected measured GPU execution intervals only; excludes warm-ups, startup, idle reservation time, and other unrecorded activity.",
+  "source_files": [
+    "hw4a_baseline_summary.json",
+    "part_a_batch_scaling.json",
+    "part_a_full_epoch_comparison.json",
+    "part_a_batch128_full_epoch.json",
+    "part_b_baseline.json",
+    "part_b_comparison.json",
+    "part_b_amp_bf16.json"
+  ],
+  "unresolved": [
+    "Determine whether Part A batch-64 and Part B FP32 baseline are separate runs.",
+    "Determine whether Part A batch-64 and Part B FP32 baseline both overlap with other counted intervals.",
+    "Recover Part A microbenchmark timings.",
+    "Recover actual GPU reservation start/end times."
+  ]
+}

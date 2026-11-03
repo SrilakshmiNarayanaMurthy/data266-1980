@@ -1,0 +1,17 @@
+{
+    "step": "47A",
+    "previous_install_status": "TIMEOUT_300_SECONDS",
+    "packages": {
+        "vllm": "NOT INSTALLED",
+        "torch": "2.9.0",
+        "transformers": "4.57.6",
+        "tokenizers": "0.22.2",
+        "triton": "3.5.0",
+        "xformers": "0.0.33.post1",
+        "flashinfer-python": "NOT INSTALLED",
+        "numpy": "2.2.6",
+        "safetensors": "0.8.0"
+    },
+    "pip_cache_info": "Package index page cache location: /root/.cache/pip/http\nPackage index page cache size: 590.4 MB\nNumber of HTTP files: 36\nLocally built wheels location: /root/.cache/pip/wheels\nLocally built wheels size: 0 bytes\nNumber of locally built wheels: 0\n",
+    "remaining_install_processes": []
+}

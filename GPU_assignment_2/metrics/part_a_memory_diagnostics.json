@@ -1,0 +1,14 @@
+{
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "physical_vram_gib": 23.98779296875,
+    "current_allocated_gib": 2.90370512008667,
+    "current_reserved_gib": 3.099609375,
+    "environment_variables": {
+        "PYTORCH_CUDA_ALLOC_CONF": null,
+        "PYTORCH_ALLOC_CONF": null,
+        "CUDA_VISIBLE_DEVICES": null,
+        "CUDA_MANAGED_FORCE_DEVICE_ALLOC": null
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 4090, 24564 MiB, 3633 MiB, 20506 MiB",
+    "timestamp": "2026-10-26T22:44:04.137253"
+}

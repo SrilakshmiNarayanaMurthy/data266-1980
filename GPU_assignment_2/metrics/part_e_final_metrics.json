@@ -1,0 +1,52 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "baseline_training_seconds": 36.66233051099971,
+  "part_a_fastest_batch": 64,
+  "part_a_fastest_examples_per_second": 465.3146685294353,
+  "part_b_fastest_configuration": "BF16 AMP",
+  "part_b_fastest_examples_per_second": 768.4279194560173,
+  "part_b_lowest_memory_configuration": "Checkpointing",
+  "part_b_lowest_peak_allocated_gib": 5.176101207733154,
+  "part_c_world_size": 1,
+  "part_c_exact_elapsed_seconds": 0.5275737239990121,
+  "part_c_multi_gpu_scaling_measured": false,
+  "part_d_backend_comparison": [
+    {
+      "batch_size": 1,
+      "vllm_tokens_per_second": 141.73516074420624,
+      "hf_tokens_per_second": 172.64218215328245,
+      "vllm_throughput_speedup": 0.8209764205735361,
+      "vllm_p50_ms": 235.9431160002714,
+      "hf_p50_ms": 177.53766299938434,
+      "vllm_p95_ms": 308.5259142000723,
+      "hf_p95_ms": 219.0654094003548
+    },
+    {
+      "batch_size": 8,
+      "vllm_tokens_per_second": 1497.4305308765745,
+      "hf_tokens_per_second": 498.37277104650514,
+      "vllm_throughput_speedup": 3.004639534644326,
+      "vllm_p50_ms": 165.51894000076572,
+      "hf_p50_ms": 621.6386790001707,
+      "vllm_p95_ms": 201.11221700062742,
+      "hf_p95_ms": 665.6011302005936
+    },
+    {
+      "batch_size": 32,
+      "vllm_tokens_per_second": 6050.741582730896,
+      "hf_tokens_per_second": 1640.8251111621948,
+      "vllm_throughput_speedup": 3.68762127149868,
+      "vllm_p50_ms": 162.24374800003716,
+      "hf_p50_ms": 623.4159989999171,
+      "vllm_p95_ms": 189.59161699967808,
+      "hf_p95_ms": 630.520900398551
+    }
+  ],
+  "documented_measured_seconds": 563.1984283049987,
+  "documented_measured_gpu_hours": 0.15644400786249965,
+  "full_reservation_gpu_hours_verified": false,
+  "gpu_hours_scope": "Measured benchmark intervals only; not full GPU reservation or allocation time.",
+  "reported_total_gpu_reservation_hours": 6.0,
+  "gpu_reservation_hours_source": "Student-reported"
+}

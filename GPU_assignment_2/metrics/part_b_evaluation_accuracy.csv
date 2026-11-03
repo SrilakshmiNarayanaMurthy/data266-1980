@@ -1,0 +1,7 @@
+configuration,training_epochs,physical_batch_size,effective_batch_size,test_examples,correct_predictions,eval_accuracy
+FP32 Baseline,1,64,64,750,526,0.7013333333333334
+BF16 AMP,1,64,64,750,524,0.6986666666666667
+Checkpointing,1,64,64,750,526,0.7013333333333334
+Accumulation x4,1,64,256,750,527,0.7026666666666667
+8-bit AdamW,1,64,64,750,526,0.7013333333333334
+Combined,1,64,256,750,526,0.7013333333333334

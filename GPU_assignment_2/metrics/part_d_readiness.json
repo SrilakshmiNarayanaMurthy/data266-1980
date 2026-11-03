@@ -1,0 +1,21 @@
+{
+    "part": "D",
+    "step": 42,
+    "venv_exists": true,
+    "venv_python": "/app/HW4_5_GPU_Assignment/vllm_env/bin/python",
+    "packages": {
+        "vllm": "NOT INSTALLED",
+        "torch": "2.9.0",
+        "transformers": "4.57.6"
+    },
+    "vllm_installed": false,
+    "checkpoint_config": "/app/HW4_5_GPU_Assignment/models/bert_best/config.json",
+    "model_type": "bert",
+    "architectures": [
+        "BertForSequenceClassification"
+    ],
+    "is_decoder": false,
+    "add_cross_attention": false,
+    "autoregressive_kv_cache_applicable": false,
+    "timestamp": "2026-10-26T23:13:34.933181"
+}

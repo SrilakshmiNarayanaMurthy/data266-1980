@@ -1,0 +1,64 @@
+activity,seconds,gpu_count,gpu_hours,source,method
+BERT baseline training,36.66233051099971,1,0.01018398069749992,hw4a_baseline_summary.json,Recorded wall-clock training duration
+Part A scaling batch 1,0.2754823570003282,1,7.652287694453561e-05,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 2,0.30266486300024553,1,8.407357305562375e-05,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 4,0.408358801999384,1,0.00011343300055538444,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 8,0.319950713000253,1,8.887519805562583e-05,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 16,0.45097113700103364,1,0.0001252697602780649,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 32,0.7884529219991236,1,0.00021901470055531213,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 64,1.3585526140004731,1,0.00037737572611124253,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 128,2.698507410002094,1,0.0007495853916672483,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 256,53.13679893900007,1,0.01476022192750002,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A scaling batch 512,379.7139270330008,1,0.10547609084250022,part_a_batch_scaling.json,Measured steps x mean step duration
+Part A epoch batch 16,10.137315207000029,1,0.0028159208908333415,part_a_full_epoch_comparison.json,Recorded epoch duration
+Part A epoch batch 32,8.692586199999823,1,0.002414607277777729,part_a_full_epoch_comparison.json,Recorded epoch duration
+Part A epoch batch 64,7.521791674999804,1,0.0020893865763888346,part_a_full_epoch_comparison.json,Recorded epoch duration
+Part A epoch batch 128,7.921266724999441,1,0.0022003518680554003,part_a_full_epoch_comparison.json,Recorded epoch duration
+Part B amp_bf16,4.554753817999881,1,0.0012652093938888558,part_b_amp_bf16.json,Recorded epoch duration
+Part B gradient_checkpointing,10.166402485000617,1,0.002824000690277949,part_b_gradient_checkpointing.json,Recorded epoch duration
+Part B gradient_accumulation,7.327996328000154,1,0.0020355545355555983,part_b_gradient_accumulation.json,Recorded epoch duration
+Part B adamw_8bit,7.766710869000235,1,0.0021574196858333986,part_b_adamw_8bit.json,Recorded epoch duration
+Part B combined,5.008845110000038,1,0.0013913458638888996,part_b_combined.json,Recorded epoch duration
+Part C single-GPU DDP,0.5275737239990121,1,0.00014654825666639228,part_c_single_gpu_ddp.json,Exact elapsed_seconds from Part C source JSON
+Part D vLLM batch 1 trial 1,0.3138433240001177,1,8.717870111114382e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 1 trial 2,0.2359431160002714,1,6.553975444451983e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 1 trial 3,0.2872562749998906,1,7.979340972219183e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 1 trial 4,0.12235984399922017,1,3.3988845555338936e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 1 trial 5,0.16946341299990308,1,4.707317027775086e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 8 trial 1,0.13679275999857055,1,3.799798888849182e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 8 trial 2,0.16551894000076572,1,4.5977483333546035e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 8 trial 3,0.20465119400068943,1,5.6847553889080394e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 8 trial 4,0.1869563090003794,1,5.193230805566095e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 8 trial 5,0.1608783809988381,1,4.468843916634392e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 32 trial 1,0.16005150599994522,1,4.445875166665145e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 32 trial 2,0.1514726570003404,1,4.207573805565011e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 32 trial 3,0.18055978499978664,1,5.015549583327407e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 32 trial 4,0.19184957499965094,1,5.329154861101415e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D vLLM batch 32 trial 5,0.16224374800003716,1,4.50677077777881e-05,part_d_vllm_benchmark.json,Recorded inference trial duration
+Part D HF batch 1 trial 1,0.18170984300013515,1,5.047495638892643e-05,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 1 trial 2,0.16445104100057506,1,4.5680844722381964e-05,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 1 trial 3,0.17753766299938434,1,4.9316017499828985e-05,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 1 trial 4,0.17466949699883116,1,4.8519304721897544e-05,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 1 trial 5,0.22840430100040976,1,6.344563916678048e-05,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 8 trial 1,0.6552911710004992,1,0.00018202532527791644,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 8 trial 2,0.6681786200006172,1,0.00018560517222239366,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 8 trial 3,0.6216386790001707,1,0.00017267741083338073,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 8 trial 4,0.46473646300000837,1,0.00012909346194444677,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 8 trial 5,0.1585136820012849,1,4.403157833369025e-05,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 32 trial 1,0.6186623339999642,1,0.0001718506483333234,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 32 trial 2,0.6221407230004843,1,0.00017281686750013453,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 32 trial 3,0.6321474179985671,1,0.00017559650499960198,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 32 trial 4,0.6240148299984867,1,0.0001733374527773574,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D HF batch 32 trial 5,0.6234159989999171,1,0.0001731711108333103,part_d_hf_benchmark.json,Recorded inference trial duration
+Part D KV cache=True context=128 tokens=32,0.3776680690007197,1,0.00010490779694464435,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=False context=128 tokens=32,0.36844420399938826,1,0.0001023456122220523,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=True context=128 tokens=64,0.7394747269991058,1,0.0002054096463886405,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=False context=128 tokens=64,0.7308879329993943,1,0.00020302442583316506,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=True context=512 tokens=32,0.5803128459992877,1,0.00016119801277757992,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=False context=512 tokens=32,0.40773515699947893,1,0.0001132597658331886,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=True context=512 tokens=64,0.7556069969996315,1,0.00020989083249989764,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=False context=512 tokens=64,0.9258077880003839,1,0.0002571688300001066,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=True context=1024 tokens=32,0.7347406509998109,1,0.00020409462527772526,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=False context=1024 tokens=32,0.5744054940005299,1,0.00015955708166681386,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=True context=1024 tokens=64,0.7692384099991614,1,0.00021367733611087815,part_d_kv_cache_benchmark.json,Mean latency x measured runs
+Part D KV cache=False context=1024 tokens=64,1.0475134960015566,1,0.0002909759711115435,part_d_kv_cache_benchmark.json,Mean latency x measured runs

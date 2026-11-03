@@ -1,0 +1,141 @@
+{
+    "model": "facebook/opt-125m",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "precision": "FP16",
+    "warmup_runs": 1,
+    "measured_runs": 3,
+    "results": [
+        {
+            "context_tokens": 128,
+            "generated_tokens": 32,
+            "kv_cache": true,
+            "mean_latency_seconds": 0.12588935633357323,
+            "p50_latency_seconds": 0.12293063099969004,
+            "tokens_per_second": 254.1914656804546,
+            "peak_allocated_gib": 0.26583003997802734,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 128,
+            "generated_tokens": 32,
+            "kv_cache": false,
+            "mean_latency_seconds": 0.12281473466646275,
+            "p50_latency_seconds": 0.12129759900017234,
+            "tokens_per_second": 260.5550554410659,
+            "peak_allocated_gib": 0.2653021812438965,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 128,
+            "generated_tokens": 64,
+            "kv_cache": true,
+            "mean_latency_seconds": 0.2464915756663686,
+            "p50_latency_seconds": 0.2427225539995561,
+            "tokens_per_second": 259.64376197028866,
+            "peak_allocated_gib": 0.26583003997802734,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 128,
+            "generated_tokens": 64,
+            "kv_cache": false,
+            "mean_latency_seconds": 0.2436293109997981,
+            "p50_latency_seconds": 0.24010960499981593,
+            "tokens_per_second": 262.6941714745195,
+            "peak_allocated_gib": 0.2676081657409668,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 512,
+            "generated_tokens": 32,
+            "kv_cache": true,
+            "mean_latency_seconds": 0.1934376153330959,
+            "p50_latency_seconds": 0.19035560399970564,
+            "tokens_per_second": 165.42801122158485,
+            "peak_allocated_gib": 0.31641292572021484,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 512,
+            "generated_tokens": 32,
+            "kv_cache": false,
+            "mean_latency_seconds": 0.13591171899982632,
+            "p50_latency_seconds": 0.13513520500055165,
+            "tokens_per_second": 235.44695215017398,
+            "peak_allocated_gib": 0.30109548568725586,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 512,
+            "generated_tokens": 64,
+            "kv_cache": true,
+            "mean_latency_seconds": 0.2518689989998772,
+            "p50_latency_seconds": 0.252249885999845,
+            "tokens_per_second": 254.10034682367242,
+            "peak_allocated_gib": 0.31641292572021484,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 512,
+            "generated_tokens": 64,
+            "kv_cache": false,
+            "mean_latency_seconds": 0.30860259600012796,
+            "p50_latency_seconds": 0.33300563500051794,
+            "tokens_per_second": 207.3864602226919,
+            "peak_allocated_gib": 0.30498266220092773,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 1024,
+            "generated_tokens": 32,
+            "kv_cache": true,
+            "mean_latency_seconds": 0.2449135503332703,
+            "p50_latency_seconds": 0.12905407800099056,
+            "tokens_per_second": 130.65834845175146,
+            "peak_allocated_gib": 0.3822927474975586,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 1024,
+            "generated_tokens": 32,
+            "kv_cache": false,
+            "mean_latency_seconds": 0.19146849800017662,
+            "p50_latency_seconds": 0.15302300500115962,
+            "tokens_per_second": 167.12932066752037,
+            "peak_allocated_gib": 0.35062170028686523,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 1024,
+            "generated_tokens": 64,
+            "kv_cache": true,
+            "mean_latency_seconds": 0.2564128033330538,
+            "p50_latency_seconds": 0.25006380200102285,
+            "tokens_per_second": 249.59752074809853,
+            "peak_allocated_gib": 0.3822927474975586,
+            "measured_runs": 3,
+            "precision": "FP16"
+        },
+        {
+            "context_tokens": 1024,
+            "generated_tokens": 64,
+            "kv_cache": false,
+            "mean_latency_seconds": 0.34917116533385223,
+            "p50_latency_seconds": 0.338024509999741,
+            "tokens_per_second": 183.29119456014595,
+            "peak_allocated_gib": 0.3528437614440918,
+            "measured_runs": 3,
+            "precision": "FP16"
+        }
+    ]
+}

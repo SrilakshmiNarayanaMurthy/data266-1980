@@ -1,0 +1,527 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "documented_measured_seconds": 563.1988545809998,
+  "documented_measured_gpu_hours": 0.15644412627249993,
+  "excluded_duplicate_records": [
+    {
+      "activity": "Part B FP32 baseline",
+      "seconds": 7.521791674999804,
+      "reason": "Reused Part A batch-64 full-epoch result"
+    }
+  ],
+  "total_gpu_reservation_hours_verified": false,
+  "scope": "Recorded measured experiment intervals only. Not total GPU reservation usage.",
+  "not_included": [
+    "Warm-up runs",
+    "Model loading and engine initialization",
+    "Debugging and other unrecorded GPU activity",
+    "Idle time within GPU reservation"
+  ],
+  "records": [
+    {
+      "activity": "BERT baseline training",
+      "seconds": 36.66233051099971,
+      "gpu_count": 1,
+      "gpu_hours": 0.01018398069749992,
+      "source": "hw4a_baseline_summary.json",
+      "method": "Recorded wall-clock training duration"
+    },
+    {
+      "activity": "Part A scaling batch 1",
+      "seconds": 0.2754823570003282,
+      "gpu_count": 1,
+      "gpu_hours": 7.652287694453561e-05,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 2",
+      "seconds": 0.30266486300024553,
+      "gpu_count": 1,
+      "gpu_hours": 8.407357305562375e-05,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 4",
+      "seconds": 0.408358801999384,
+      "gpu_count": 1,
+      "gpu_hours": 0.00011343300055538444,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 8",
+      "seconds": 0.319950713000253,
+      "gpu_count": 1,
+      "gpu_hours": 8.887519805562583e-05,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 16",
+      "seconds": 0.45097113700103364,
+      "gpu_count": 1,
+      "gpu_hours": 0.0001252697602780649,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 32",
+      "seconds": 0.7884529219991236,
+      "gpu_count": 1,
+      "gpu_hours": 0.00021901470055531213,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 64",
+      "seconds": 1.3585526140004731,
+      "gpu_count": 1,
+      "gpu_hours": 0.00037737572611124253,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 128",
+      "seconds": 2.698507410002094,
+      "gpu_count": 1,
+      "gpu_hours": 0.0007495853916672483,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 256",
+      "seconds": 53.13679893900007,
+      "gpu_count": 1,
+      "gpu_hours": 0.01476022192750002,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A scaling batch 512",
+      "seconds": 379.7139270330008,
+      "gpu_count": 1,
+      "gpu_hours": 0.10547609084250022,
+      "source": "part_a_batch_scaling.json",
+      "method": "Measured steps x mean step duration"
+    },
+    {
+      "activity": "Part A epoch batch 16",
+      "seconds": 10.137315207000029,
+      "gpu_count": 1,
+      "gpu_hours": 0.0028159208908333415,
+      "source": "part_a_full_epoch_comparison.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part A epoch batch 32",
+      "seconds": 8.692586199999823,
+      "gpu_count": 1,
+      "gpu_hours": 0.002414607277777729,
+      "source": "part_a_full_epoch_comparison.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part A epoch batch 64",
+      "seconds": 7.521791674999804,
+      "gpu_count": 1,
+      "gpu_hours": 0.0020893865763888346,
+      "source": "part_a_full_epoch_comparison.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part A epoch batch 128",
+      "seconds": 7.921266724999441,
+      "gpu_count": 1,
+      "gpu_hours": 0.0022003518680554003,
+      "source": "part_a_full_epoch_comparison.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part B amp_bf16",
+      "seconds": 4.554753817999881,
+      "gpu_count": 1,
+      "gpu_hours": 0.0012652093938888558,
+      "source": "part_b_amp_bf16.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part B gradient_checkpointing",
+      "seconds": 10.166402485000617,
+      "gpu_count": 1,
+      "gpu_hours": 0.002824000690277949,
+      "source": "part_b_gradient_checkpointing.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part B gradient_accumulation",
+      "seconds": 7.327996328000154,
+      "gpu_count": 1,
+      "gpu_hours": 0.0020355545355555983,
+      "source": "part_b_gradient_accumulation.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part B adamw_8bit",
+      "seconds": 7.766710869000235,
+      "gpu_count": 1,
+      "gpu_hours": 0.0021574196858333986,
+      "source": "part_b_adamw_8bit.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part B combined",
+      "seconds": 5.008845110000038,
+      "gpu_count": 1,
+      "gpu_hours": 0.0013913458638888996,
+      "source": "part_b_combined.json",
+      "method": "Recorded epoch duration"
+    },
+    {
+      "activity": "Part C single-GPU DDP",
+      "seconds": 0.528,
+      "gpu_count": 1,
+      "gpu_hours": 0.00014666666666666666,
+      "source": "part_c_single_gpu_ddp.json",
+      "method": "Previously reported rounded duration"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 1",
+      "seconds": 0.3138433240001177,
+      "gpu_count": 1,
+      "gpu_hours": 8.717870111114382e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 2",
+      "seconds": 0.2359431160002714,
+      "gpu_count": 1,
+      "gpu_hours": 6.553975444451983e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 3",
+      "seconds": 0.2872562749998906,
+      "gpu_count": 1,
+      "gpu_hours": 7.979340972219183e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 4",
+      "seconds": 0.12235984399922017,
+      "gpu_count": 1,
+      "gpu_hours": 3.3988845555338936e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 1 trial 5",
+      "seconds": 0.16946341299990308,
+      "gpu_count": 1,
+      "gpu_hours": 4.707317027775086e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 1",
+      "seconds": 0.13679275999857055,
+      "gpu_count": 1,
+      "gpu_hours": 3.799798888849182e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 2",
+      "seconds": 0.16551894000076572,
+      "gpu_count": 1,
+      "gpu_hours": 4.5977483333546035e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 3",
+      "seconds": 0.20465119400068943,
+      "gpu_count": 1,
+      "gpu_hours": 5.6847553889080394e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 4",
+      "seconds": 0.1869563090003794,
+      "gpu_count": 1,
+      "gpu_hours": 5.193230805566095e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 8 trial 5",
+      "seconds": 0.1608783809988381,
+      "gpu_count": 1,
+      "gpu_hours": 4.468843916634392e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 1",
+      "seconds": 0.16005150599994522,
+      "gpu_count": 1,
+      "gpu_hours": 4.445875166665145e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 2",
+      "seconds": 0.1514726570003404,
+      "gpu_count": 1,
+      "gpu_hours": 4.207573805565011e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 3",
+      "seconds": 0.18055978499978664,
+      "gpu_count": 1,
+      "gpu_hours": 5.015549583327407e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 4",
+      "seconds": 0.19184957499965094,
+      "gpu_count": 1,
+      "gpu_hours": 5.329154861101415e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D vLLM batch 32 trial 5",
+      "seconds": 0.16224374800003716,
+      "gpu_count": 1,
+      "gpu_hours": 4.50677077777881e-05,
+      "source": "part_d_vllm_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 1 trial 1",
+      "seconds": 0.18170984300013515,
+      "gpu_count": 1,
+      "gpu_hours": 5.047495638892643e-05,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 1 trial 2",
+      "seconds": 0.16445104100057506,
+      "gpu_count": 1,
+      "gpu_hours": 4.5680844722381964e-05,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 1 trial 3",
+      "seconds": 0.17753766299938434,
+      "gpu_count": 1,
+      "gpu_hours": 4.9316017499828985e-05,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 1 trial 4",
+      "seconds": 0.17466949699883116,
+      "gpu_count": 1,
+      "gpu_hours": 4.8519304721897544e-05,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 1 trial 5",
+      "seconds": 0.22840430100040976,
+      "gpu_count": 1,
+      "gpu_hours": 6.344563916678048e-05,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 8 trial 1",
+      "seconds": 0.6552911710004992,
+      "gpu_count": 1,
+      "gpu_hours": 0.00018202532527791644,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 8 trial 2",
+      "seconds": 0.6681786200006172,
+      "gpu_count": 1,
+      "gpu_hours": 0.00018560517222239366,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 8 trial 3",
+      "seconds": 0.6216386790001707,
+      "gpu_count": 1,
+      "gpu_hours": 0.00017267741083338073,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 8 trial 4",
+      "seconds": 0.46473646300000837,
+      "gpu_count": 1,
+      "gpu_hours": 0.00012909346194444677,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 8 trial 5",
+      "seconds": 0.1585136820012849,
+      "gpu_count": 1,
+      "gpu_hours": 4.403157833369025e-05,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 32 trial 1",
+      "seconds": 0.6186623339999642,
+      "gpu_count": 1,
+      "gpu_hours": 0.0001718506483333234,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 32 trial 2",
+      "seconds": 0.6221407230004843,
+      "gpu_count": 1,
+      "gpu_hours": 0.00017281686750013453,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 32 trial 3",
+      "seconds": 0.6321474179985671,
+      "gpu_count": 1,
+      "gpu_hours": 0.00017559650499960198,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 32 trial 4",
+      "seconds": 0.6240148299984867,
+      "gpu_count": 1,
+      "gpu_hours": 0.0001733374527773574,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D HF batch 32 trial 5",
+      "seconds": 0.6234159989999171,
+      "gpu_count": 1,
+      "gpu_hours": 0.0001731711108333103,
+      "source": "part_d_hf_benchmark.json",
+      "method": "Recorded inference trial duration"
+    },
+    {
+      "activity": "Part D KV cache=True context=128 tokens=32",
+      "seconds": 0.3776680690007197,
+      "gpu_count": 1,
+      "gpu_hours": 0.00010490779694464435,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=False context=128 tokens=32",
+      "seconds": 0.36844420399938826,
+      "gpu_count": 1,
+      "gpu_hours": 0.0001023456122220523,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=True context=128 tokens=64",
+      "seconds": 0.7394747269991058,
+      "gpu_count": 1,
+      "gpu_hours": 0.0002054096463886405,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=False context=128 tokens=64",
+      "seconds": 0.7308879329993943,
+      "gpu_count": 1,
+      "gpu_hours": 0.00020302442583316506,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=True context=512 tokens=32",
+      "seconds": 0.5803128459992877,
+      "gpu_count": 1,
+      "gpu_hours": 0.00016119801277757992,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=False context=512 tokens=32",
+      "seconds": 0.40773515699947893,
+      "gpu_count": 1,
+      "gpu_hours": 0.0001132597658331886,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=True context=512 tokens=64",
+      "seconds": 0.7556069969996315,
+      "gpu_count": 1,
+      "gpu_hours": 0.00020989083249989764,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=False context=512 tokens=64",
+      "seconds": 0.9258077880003839,
+      "gpu_count": 1,
+      "gpu_hours": 0.0002571688300001066,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=True context=1024 tokens=32",
+      "seconds": 0.7347406509998109,
+      "gpu_count": 1,
+      "gpu_hours": 0.00020409462527772526,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=False context=1024 tokens=32",
+      "seconds": 0.5744054940005299,
+      "gpu_count": 1,
+      "gpu_hours": 0.00015955708166681386,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=True context=1024 tokens=64",
+      "seconds": 0.7692384099991614,
+      "gpu_count": 1,
+      "gpu_hours": 0.00021367733611087815,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    },
+    {
+      "activity": "Part D KV cache=False context=1024 tokens=64",
+      "seconds": 1.0475134960015566,
+      "gpu_count": 1,
+      "gpu_hours": 0.0002909759711115435,
+      "source": "part_d_kv_cache_benchmark.json",
+      "method": "Mean latency x measured runs"
+    }
+  ]
+}

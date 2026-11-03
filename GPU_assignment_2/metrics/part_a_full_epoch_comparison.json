@@ -1,0 +1,50 @@
+[
+    {
+        "batch_size": 16,
+        "epoch_seconds": 10.137315207000029,
+        "examples_per_second": 345.259067961424,
+        "average_loss": 0.420783527135849,
+        "peak_allocated_gib": 5.672229766845703,
+        "peak_reserved_gib": 5.91796875,
+        "examples": 3500,
+        "precision": "FP32",
+        "seed": 1980,
+        "timestamp": "2026-10-26T22:49:26.979713"
+    },
+    {
+        "batch_size": 32,
+        "epoch_seconds": 8.692586199999823,
+        "examples_per_second": 402.6419663229881,
+        "average_loss": 0.40129068837847026,
+        "peak_allocated_gib": 7.232440948486328,
+        "peak_reserved_gib": 7.5390625,
+        "examples": 3500,
+        "precision": "FP32",
+        "seed": 1980,
+        "timestamp": "2026-10-26T22:49:36.895891"
+    },
+    {
+        "batch_size": 64,
+        "epoch_seconds": 7.521791674999804,
+        "examples_per_second": 465.3146685294353,
+        "average_loss": 0.38315683286530633,
+        "peak_allocated_gib": 10.234943866729736,
+        "peak_reserved_gib": 10.623046875,
+        "examples": 3500,
+        "precision": "FP32",
+        "seed": 1980,
+        "timestamp": "2026-10-26T22:49:45.713140"
+    },
+    {
+        "batch_size": 128,
+        "epoch_seconds": 7.921266724999441,
+        "examples_per_second": 441.8485226553518,
+        "average_loss": 0.3971626296383994,
+        "peak_allocated_gib": 16.341268062591553,
+        "peak_reserved_gib": 16.62109375,
+        "examples": 3500,
+        "precision": "FP32",
+        "seed": 1980,
+        "timestamp": "2026-10-26T22:45:00.502473"
+    }
+]

@@ -1,0 +1,19 @@
+{
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "physical_vram_gib": 23.98779296875,
+    "model": "bert-base-uncased",
+    "training_examples": 3500,
+    "sequence_length": 128,
+    "precision": "FP32",
+    "best_full_epoch_batch_size": 64,
+    "best_full_epoch_seconds": 7.521791674999804,
+    "best_full_epoch_throughput": 465.3146685294353,
+    "best_peak_allocated_gib": 10.234943866729736,
+    "throughput_speedup_vs_batch16": 1.3477261329496064,
+    "reported_allocation_above_vram_batches": [
+        256,
+        512
+    ],
+    "confirmed_cuda_oom": false,
+    "note": "Batches 256 and 512 completed but reported allocations exceeded physical VRAM. The exact oversubscription mechanism is unverified."
+}

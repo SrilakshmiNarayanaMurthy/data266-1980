@@ -1,0 +1,24 @@
+HW4.a BERT TRAINING CURVE ANALYSIS
+=================================================================
+
+Model: bert-base-uncased
+Precision: FP32
+Epochs: 3
+
+Training loss at epoch 1: 0.888026
+Training loss at epoch 3: 0.370063
+Training loss reduction: 0.517963
+
+Best validation loss epoch: 2
+Best validation loss: 0.715220
+
+Validation loss increase after best epoch:
+0.067401
+
+INTERPRETATION
+Training loss decreases across all three epochs.
+Validation loss improves through epoch 2 but rises in epoch 3.
+This suggests the onset of overfitting after epoch 2.
+The epoch-2 checkpoint is selected for final test evaluation.
+
+Generated: 2026-10-26T21:40:10.020133

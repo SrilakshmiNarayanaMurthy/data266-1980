@@ -1,0 +1,2 @@
+experiment,part,gpu,physical_batch_size,effective_batch_size,epochs,training_examples,microbatches,optimizer_updates,precision,amp,gradient_checkpointing,gradient_accumulation_steps,optimizer,epoch_seconds,examples_per_second,average_loss,peak_allocated_gib,peak_reserved_gib,speedup_vs_fp32,memory_reduction_percent,seed,timestamp
+gradient_accumulation,B,NVIDIA GeForce RTX 4090,64,256,1,3500,55,14,FP32,False,False,4,AdamW,7.327996328000154,477.62032666781744,0.39528836447852,10.660689353942871,10.92578125,1.0264458848401932,-4.159724691769792,1980,2026-10-26T23:03:48.231983

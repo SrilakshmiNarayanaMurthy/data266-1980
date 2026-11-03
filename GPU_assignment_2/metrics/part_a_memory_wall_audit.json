@@ -1,0 +1,7 @@
+{
+  "source": "/app/HW4_5_GPU_Assignment/metrics/part_a_batch_scaling.csv",
+  "largest_recorded_successful_batch": 512,
+  "oom_observed_in_csv": false,
+  "memory_wall_confirmed": false,
+  "note": "A maximum successful tested batch does not establish the GPU OOM boundary unless an OOM was observed."
+}

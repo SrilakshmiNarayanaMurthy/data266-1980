@@ -1,0 +1,11 @@
+{
+    "step": "47C",
+    "environment": "/app/HW4_5_GPU_Assignment/vllm_env/bin/python",
+    "installed_packages": {
+        "vllm": "0.11.2",
+        "flashinfer-python": "0.5.2"
+    },
+    "install_seconds": 180.736059887,
+    "metadata_verified": true,
+    "runtime_import_verified": false
+}

@@ -1,0 +1,186 @@
+{
+  "model": "facebook/opt-125m",
+  "backend": "Hugging Face Transformers",
+  "dtype": "float16",
+  "attention_implementation": "eager",
+  "use_cache": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "model_load_seconds": 4.776706716998888,
+  "warmup_runs_per_batch": 1,
+  "measured_trials_per_batch": 5,
+  "prompt_source": "/app/HW4_5_GPU_Assignment/metrics/part_d_vllm_benchmark.json",
+  "summary": [
+    {
+      "batch_size": 1,
+      "prompt_tokens_per_request": 128,
+      "generated_tokens_per_request": 32,
+      "trials": 5,
+      "throughput_tokens_per_second": 172.64218215328245,
+      "throughput_requests_per_second": 5.3950681922900765,
+      "batch_latency_p50_ms": 177.53766299938434,
+      "batch_latency_p95_ms": 219.0654094003548,
+      "peak_allocated_gib": 0.2668118476867676
+    },
+    {
+      "batch_size": 8,
+      "prompt_tokens_per_request": 128,
+      "generated_tokens_per_request": 32,
+      "trials": 5,
+      "throughput_tokens_per_second": 498.37277104650514,
+      "throughput_requests_per_second": 15.574149095203285,
+      "batch_latency_p50_ms": 621.6386790001707,
+      "batch_latency_p95_ms": 665.6011302005936,
+      "peak_allocated_gib": 0.3879737854003906
+    },
+    {
+      "batch_size": 32,
+      "prompt_tokens_per_request": 128,
+      "generated_tokens_per_request": 32,
+      "trials": 5,
+      "throughput_tokens_per_second": 1640.8251111621948,
+      "throughput_requests_per_second": 51.27578472381859,
+      "batch_latency_p50_ms": 623.4159989999171,
+      "batch_latency_p95_ms": 630.520900398551,
+      "peak_allocated_gib": 0.7980079650878906
+    }
+  ],
+  "trials": [
+    {
+      "batch_size": 1,
+      "trial": 1,
+      "seconds": 0.18170984300013515,
+      "generated_tokens": 32,
+      "tokens_per_second": 176.10493450250902,
+      "requests_per_second": 5.503279203203407,
+      "peak_allocated_gib": 0.26681041717529297
+    },
+    {
+      "batch_size": 1,
+      "trial": 2,
+      "seconds": 0.16445104100057506,
+      "generated_tokens": 32,
+      "tokens_per_second": 194.58678890265037,
+      "requests_per_second": 6.080837153207824,
+      "peak_allocated_gib": 0.2668118476867676
+    },
+    {
+      "batch_size": 1,
+      "trial": 3,
+      "seconds": 0.17753766299938434,
+      "generated_tokens": 32,
+      "tokens_per_second": 180.24344502107684,
+      "requests_per_second": 5.632607656908651,
+      "peak_allocated_gib": 0.2668118476867676
+    },
+    {
+      "batch_size": 1,
+      "trial": 4,
+      "seconds": 0.17466949699883116,
+      "generated_tokens": 32,
+      "tokens_per_second": 183.20313821144245,
+      "requests_per_second": 5.725098069107577,
+      "peak_allocated_gib": 0.2668118476867676
+    },
+    {
+      "batch_size": 1,
+      "trial": 5,
+      "seconds": 0.22840430100040976,
+      "generated_tokens": 32,
+      "tokens_per_second": 140.10244054004303,
+      "requests_per_second": 4.378201266876345,
+      "peak_allocated_gib": 0.2668118476867676
+    },
+    {
+      "batch_size": 8,
+      "trial": 1,
+      "seconds": 0.6552911710004992,
+      "generated_tokens": 256,
+      "tokens_per_second": 390.66602958977603,
+      "requests_per_second": 12.208313424680501,
+      "peak_allocated_gib": 0.38796567916870117
+    },
+    {
+      "batch_size": 8,
+      "trial": 2,
+      "seconds": 0.6681786200006172,
+      "generated_tokens": 256,
+      "tokens_per_second": 383.131085516869,
+      "requests_per_second": 11.972846422402156,
+      "peak_allocated_gib": 0.3879737854003906
+    },
+    {
+      "batch_size": 8,
+      "trial": 3,
+      "seconds": 0.6216386790001707,
+      "generated_tokens": 256,
+      "tokens_per_second": 411.8147867049465,
+      "requests_per_second": 12.869212084529579,
+      "peak_allocated_gib": 0.3879737854003906
+    },
+    {
+      "batch_size": 8,
+      "trial": 4,
+      "seconds": 0.46473646300000837,
+      "generated_tokens": 256,
+      "tokens_per_second": 550.849826474656,
+      "requests_per_second": 17.214057077333,
+      "peak_allocated_gib": 0.3879737854003906
+    },
+    {
+      "batch_size": 8,
+      "trial": 5,
+      "seconds": 0.1585136820012849,
+      "generated_tokens": 256,
+      "tokens_per_second": 1615.002545950102,
+      "requests_per_second": 50.46882956094069,
+      "peak_allocated_gib": 0.3879737854003906
+    },
+    {
+      "batch_size": 32,
+      "trial": 1,
+      "seconds": 0.6186623339999642,
+      "generated_tokens": 1024,
+      "tokens_per_second": 1655.1840054320476,
+      "requests_per_second": 51.72450016975149,
+      "peak_allocated_gib": 0.7979793548583984
+    },
+    {
+      "batch_size": 32,
+      "trial": 2,
+      "seconds": 0.6221407230004843,
+      "generated_tokens": 1024,
+      "tokens_per_second": 1645.9298710770986,
+      "requests_per_second": 51.43530847115933,
+      "peak_allocated_gib": 0.7980079650878906
+    },
+    {
+      "batch_size": 32,
+      "trial": 3,
+      "seconds": 0.6321474179985671,
+      "generated_tokens": 1024,
+      "tokens_per_second": 1619.8753183902447,
+      "requests_per_second": 50.62110369969515,
+      "peak_allocated_gib": 0.7980079650878906
+    },
+    {
+      "batch_size": 32,
+      "trial": 4,
+      "seconds": 0.6240148299984867,
+      "generated_tokens": 1024,
+      "tokens_per_second": 1640.986641299027,
+      "requests_per_second": 51.280832540594595,
+      "peak_allocated_gib": 0.7980079650878906
+    },
+    {
+      "batch_size": 32,
+      "trial": 5,
+      "seconds": 0.6234159989999171,
+      "generated_tokens": 1024,
+      "tokens_per_second": 1642.5629140777573,
+      "requests_per_second": 51.33009106492992,
+      "peak_allocated_gib": 0.7980079650878906
+    }
+  ],
+  "latency_definition": "Wall-clock time to complete an entire batch",
+  "memory_definition": "Peak PyTorch allocated memory, not total device usage"
+}

@@ -1,0 +1,2 @@
+experiment,part,gpu,physical_batch_size,effective_batch_size,epochs,training_examples,precision,amp,gradient_checkpointing,gradient_accumulation_steps,optimizer,epoch_seconds,examples_per_second,average_loss,peak_allocated_gib,peak_reserved_gib,speedup_vs_fp32,memory_reduction_percent,seed,timestamp
+amp_bf16,B,NVIDIA GeForce RTX 4090,64,64,1,3500,BF16 AMP,True,False,1,AdamW,4.554753817999881,768.4279194560173,0.38308804770878385,8.430986881256104,8.76953125,1.651415636400483,17.625470241587482,1980,2026-10-26T22:57:26.557713

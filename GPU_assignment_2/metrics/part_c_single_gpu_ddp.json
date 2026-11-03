@@ -1,0 +1,23 @@
+{
+    "part": "C",
+    "step": 40,
+    "experiment": "single_gpu_ddp_functional_test",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "backend": "nccl",
+    "world_size": 1,
+    "rank": 0,
+    "batch_size": 64,
+    "training_examples": 128,
+    "optimizer_steps": 2,
+    "losses": [
+        0.4361646771430969,
+        0.40961360931396484
+    ],
+    "elapsed_seconds": 0.5275737239990121,
+    "examples_per_second": 242.62011957259583,
+    "peak_allocated_gib": 11.112711906433105,
+    "ddp_functional": true,
+    "multi_gpu_scaling_measured": false,
+    "communication_overhead_measured": false,
+    "timestamp": "2026-10-26T23:11:42.963045"
+}
