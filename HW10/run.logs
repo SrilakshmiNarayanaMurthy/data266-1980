@@ -1,0 +1,92 @@
+============================================================
+RAG HOMEWORK — EXPERIMENT RUN SUMMARY
+============================================================
+Log type: Retrospective summary from Colab outputs
+Note: Not a raw timestamped execution trace.
+
+DATASET AND PREPROCESSING
+------------------------------------------------------------
+Dataset: ccdv/arxiv-summarization
+Configuration: document
+Split: train[:100]
+Documents loaded: 100
+Documents processed: 100
+Average words/document: 6516.53
+Minimum words/document: 604
+Maximum words/document: 33095
+Status: PASS
+
+CHUNKING
+------------------------------------------------------------
+Chunk size: 240 tokens
+Overlap: 40 tokens
+Fixed-size chunks: 5131
+Fixed average tokens: 238.20
+Sentence-aware chunks: 5811
+Sentence-aware average tokens: 212.47
+Status: PASS
+
+EMBEDDING AND INDEXING
+------------------------------------------------------------
+Embedding model: sentence-transformers/all-MiniLM-L6-v2
+Embedding dimensions: 384
+GPU: Tesla T4 (reported in notebook environment)
+Vector store: ChromaDB
+Distance metric: cosine
+Fixed collection: arxiv_fixed_chunks (5131 vectors)
+Sentence collection: arxiv_sentence_chunks (5811 vectors)
+Recorded fixed indexing time: 8.62 seconds
+Recorded sentence indexing time: 9.08 seconds
+Status: PASS
+
+RETRIEVAL AND RERANKING
+------------------------------------------------------------
+Queries: 2 initial questions
+Baseline top_k: 5
+Reranking candidates: 10
+Reranked top_k: 5
+Reranker: cross-encoder/ms-marco-MiniLM-L-6-v2
+Status: PASS
+
+CONVERSATIONAL MEMORY
+------------------------------------------------------------
+Initial query: What are the advantages of additive models in statistical learning?
+Follow-up: How do they handle high-dimensional data?
+Resolved: How do additive models in statistical learning handle high-dimensional data?
+Without-memory Precision@5: 0.20
+With-memory Precision@5: 0.60
+Status: PASS
+
+FINAL EVALUATION (AFTER LABEL AUDIT)
+------------------------------------------------------------
+Unique pooled relevance judgments: 38
+Metric rows: 10
+Fixed baseline mean Precision@5: 0.90
+Fixed reranked mean Precision@5: 0.70
+Sentence baseline mean Precision@5: 0.80
+Sentence reranked mean Precision@5: 0.70
+Status: PASS
+
+ARTIFACT VERIFICATION (STEP 19)
+------------------------------------------------------------
+PASS | arxiv_relevance_judgments_labeled.csv
+PASS | arxiv_retrieval_metrics.csv
+PASS | rag_evaluation_charts/chunking_reranking_comparison.png
+PASS | rag_evaluation_charts/conversational_memory_comparison.png
+PASS | rag_evaluation_charts/evaluation_summary.csv
+PASS | rag_evaluation_charts/final_report.md
+PASS | 38 relevance judgments present
+PASS | No missing relevance labels
+PASS | 10 evaluation rows
+PASS | Metric values in valid range
+
+LIMITATIONS
+------------------------------------------------------------
+End-to-end runtime: not measured in available results
+Total GPU-hours: not measured in available results
+Top-to-bottom notebook reproducibility: not independently verified
+Pooled recall is not exhaustive corpus recall
+
+============================================================
+END OF RUN SUMMARY
+============================================================
