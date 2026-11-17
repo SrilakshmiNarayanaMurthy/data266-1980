@@ -1,0 +1,95 @@
+CLIP ASSIGNMENT — RUN SUMMARY
+This file summarizes observed notebook outputs.
+It is not a raw console transcript.
+
+ENVIRONMENT
+Platform: Google Colab
+PyTorch: 2.14.1+cu130
+Device: cuda
+GPU: Tesla T4
+
+STEP 1: INSTALLATION AND GPU CHECK
+CLIP installation completed.
+CUDA available.
+Status: PASS
+
+STEP 2: MODEL LOADING
+Model: OpenAI CLIP ViT-B/32
+Model download completed.
+Model set to evaluation mode.
+A torch.jit.load FutureWarning appeared; execution continued.
+Status: PASS
+
+STEP 3: DATASET AND SAMPLING
+Dataset: CIFAR-10
+Split: test
+Dataset archive download completed: 170 MB
+Download duration shown: 20 minutes 40 seconds
+Sampling seed: 42
+Sampling: without replacement, 100 images per class
+Classes: 10
+Total selected images: 1000
+Sample uniqueness and class balance verified.
+Status: PASS
+
+STEP 4: EMBEDDING EXTRACTION
+Caption: a photo of a dog.
+Batch size: 64
+Image encoding batches: 16
+Image encoding duration shown: approximately 6 seconds
+Image embeddings shape: (1000, 512)
+Caption embedding shape: (1, 512)
+Embeddings converted to float32 and L2-normalized.
+Status: PASS
+
+STEP 5: CAPTION–IMAGE SIMILARITY
+Metric: cosine similarity
+Method: dot product of normalized embeddings
+Scores computed: 1000
+Highest class mean: dog, 0.2599
+Lowest class mean: truck, 0.1904
+Top 10 matching images: 9 dogs and 1 cat
+Status: PASS
+
+STEP 6: VISUALIZATION
+Notebook code displays:
+- Top 10 caption–image matches with scores
+- Bottom 10 caption–image matches with scores
+- Per-class mean similarity with ±1 standard deviation
+Step completion reported.
+Status: PASS
+
+STEP 7: ZERO-SHOT CLASSIFICATION
+Text prompts: one prompt per class
+Prediction rule: class with maximum cosine similarity
+Training or fine-tuning: none
+Correct: 885
+Incorrect: 115
+Overall accuracy: 88.50%
+Status: PASS
+
+STEP 8: CLASSIFICATION EVALUATION
+Per-class accuracy calculated for all 10 classes.
+10 × 10 confusion matrix calculated and plotted.
+Most frequent directional confusion: deer -> horse, 14 images
+Status: PASS
+
+STEP 9: FINDINGS
+Markdown findings supplied for inclusion in the notebook.
+Manual verification required: findings included as a Text cell.
+
+STEP 10: AUTOMATED VERIFICATION
+PASS: 100 images from each of 10 classes
+PASS: Caption defined
+PASS: Image embeddings extracted
+PASS: Image embeddings normalized
+PASS: Caption embedding normalized
+PASS: Similarity scores computed for all images
+PASS: Zero-shot predictions generated
+PASS: Per-class accuracy calculated
+PASS: Confusion matrix calculated
+
+FINAL RESULT
+Overall accuracy: 88.50%
+All automated checks passed.
+Manual submission checks: saved plots and findings are visible.
